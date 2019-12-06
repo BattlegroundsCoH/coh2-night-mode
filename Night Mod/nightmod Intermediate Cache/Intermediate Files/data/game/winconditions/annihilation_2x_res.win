@@ -1,0 +1,38 @@
+name = "night_mode_annihilation_2x_res"
+scar_file = "data:scar/winconditions/annihilation_2x_res.scar"
+fe_name = "Night Mode - Annihilation | 2x"
+fe_priority = 0
+fe_option_name = "$3690fed557b44fc68b9753c2f52ed775:9"
+options=
+{
+	{
+		default = true,
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:10",
+		value = 100,
+	},
+	{
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:11",
+		value = 150,
+	},
+	{
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:12",
+		value = 200,
+	},
+	{
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:28",
+		value = 999,
+	},
+}
+score_display = time
+show_time = true
+permitted_categories = intel_bulletin + skin_pack + vehicle_decal + fatality + commander
+entity_replacements =
+{
+	{
+		original = "victory_point",
+		replacement = "territory_point_mp",
+	}
+}
+starting_building_replacements =
+{
+}

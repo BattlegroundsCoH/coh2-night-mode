@@ -1,0 +1,380 @@
+<instance description="" template="aura">
+	<group name="aura_bag">
+		<list name="actions">
+			<template_reference name="action" value="action\requirement_action">
+				<bool name="check_self" value="False" />
+				<bool name="global_fire_and_forget_on_success" value="False" />
+				<bool name="instant_requirement_check" value="False" />
+				<bool name="kill_action_on_failed_requirements" value="False" />
+				<bool name="no_retrigger" value="False" />
+				<bool name="validate_all_sub_actions" value="True" />
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\wwii_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+				</list>
+				<list name="action_table">
+					<template_reference name="action" value="action\requirement_action">
+						<bool name="check_self" value="False" />
+						<bool name="global_fire_and_forget_on_success" value="False" />
+						<bool name="instant_requirement_check" value="False" />
+						<bool name="kill_action_on_failed_requirements" value="False" />
+						<bool name="no_retrigger" value="False" />
+						<bool name="validate_all_sub_actions" value="True" />
+						<list name="requirement_table">
+							<template_reference name="required" value="requirements\required_all_in_list">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="infantry" />
+										<template_reference name="qualify_option" value="options\none">
+										</template_reference>
+										<bool name="search_load_out" value="True" />
+										<bool name="owned_by_player_only" value="True" />
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+						<list name="action_table">
+							<template_reference name="action" value="action\ui_unit_modifier_action">
+								<bool name="die_with_creator" value="True" />
+								<template_reference name="ui_info" value="tables\ui_info">
+									<locstring name="screen_name" value="30" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<locstring name="help_text" value="29" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<icon name="icon_name" value="ModIcons_3690fed557b44fc68b9753c2f52ed775_time_night" />
+									<string name="hotkey_name" value="" />
+								</template_reference>
+								<uniqueid name="id" value="1073747463" />
+							</template_reference>
+							<template_reference name="action" value="action\apply_modifiers_action">
+								<float name="duration" value="0" />
+								<bool name="permanent" value="False" />
+								<list name="modifiers">
+									<template_reference name="modifier" value="modifiers\sight_radius_modifier">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.7" />
+										<instance_reference name="tooltip" value="modifier_tooltip\sight_radius_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\speed_maximum_modifier">
+										<enum name="application_type" value="apply_to_entity" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.95" />
+										<instance_reference name="tooltip" value="modifier_tooltip\speed_maximum_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\accuracy_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.75" />
+										<instance_reference name="tooltip" value="modifier_tooltip\accuracy_weapon_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\detect_global_camouflage_radius">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.5" />
+										<instance_reference name="tooltip" value="modifier_tooltip\detect_global_camouflage_radius" />
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073747464" />
+							</template_reference>
+						</list>
+						<uniqueid name="id" value="1073747465" />
+						<bool name="fire_and_forget_non_global" value="False" />
+						<template_reference name="ui_help_text" value="tables\help_text_phrase">
+							<int name="phrase_order" value="0" />
+							<locstring name="phrase" value="0" />
+						</template_reference>
+					</template_reference>
+					<template_reference name="action" value="action\requirement_action">
+						<bool name="check_self" value="False" />
+						<bool name="global_fire_and_forget_on_success" value="False" />
+						<bool name="instant_requirement_check" value="False" />
+						<bool name="kill_action_on_failed_requirements" value="False" />
+						<bool name="no_retrigger" value="False" />
+						<bool name="validate_all_sub_actions" value="True" />
+						<list name="requirement_table">
+							<template_reference name="required" value="requirements\required_any_in_list">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="hmgs" />
+										<template_reference name="qualify_option" value="options\requirements\required_unit_type_option\any">
+											<int name="min_count" value="1" />
+										</template_reference>
+										<bool name="search_load_out" value="True" />
+										<bool name="owned_by_player_only" value="True" />
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+						<list name="action_table">
+							<template_reference name="action" value="action\ui_unit_modifier_action">
+								<bool name="die_with_creator" value="True" />
+								<template_reference name="ui_info" value="tables\ui_info">
+									<locstring name="screen_name" value="32" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<locstring name="help_text" value="31" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<icon name="icon_name" value="ModIcons_3690fed557b44fc68b9753c2f52ed775_time_night" />
+									<string name="hotkey_name" value="" />
+								</template_reference>
+								<uniqueid name="id" value="1073747466" />
+							</template_reference>
+							<template_reference name="action" value="action\apply_modifiers_action">
+								<float name="duration" value="0" />
+								<bool name="permanent" value="False" />
+								<list name="modifiers">
+									<template_reference name="modifier" value="modifiers\sight_radius_modifier">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.7" />
+										<instance_reference name="tooltip" value="modifier_tooltip\sight_radius_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\speed_maximum_modifier">
+										<enum name="application_type" value="apply_to_entity" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.95" />
+										<instance_reference name="tooltip" value="modifier_tooltip\speed_maximum_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\cooldown_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.65" />
+										<instance_reference name="tooltip" value="modifier_tooltip\cooldown_weapon_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\accuracy_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.75" />
+										<instance_reference name="tooltip" value="modifier_tooltip\accuracy_weapon_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\detect_global_camouflage_radius">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.5" />
+										<instance_reference name="tooltip" value="modifier_tooltip\detect_global_camouflage_radius" />
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073747467" />
+							</template_reference>
+						</list>
+						<uniqueid name="id" value="1073747468" />
+						<bool name="fire_and_forget_non_global" value="False" />
+						<template_reference name="ui_help_text" value="tables\help_text_phrase">
+							<int name="phrase_order" value="0" />
+							<locstring name="phrase" value="0" />
+						</template_reference>
+					</template_reference>
+					<template_reference name="action" value="action\requirement_action">
+						<bool name="check_self" value="False" />
+						<bool name="global_fire_and_forget_on_success" value="False" />
+						<bool name="instant_requirement_check" value="False" />
+						<bool name="kill_action_on_failed_requirements" value="False" />
+						<bool name="no_retrigger" value="False" />
+						<bool name="validate_all_sub_actions" value="True" />
+						<list name="requirement_table">
+							<template_reference name="required" value="requirements\required_any_in_list">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="mortars" />
+										<template_reference name="qualify_option" value="options\requirements\required_unit_type_option\any">
+											<int name="min_count" value="1" />
+										</template_reference>
+										<bool name="search_load_out" value="True" />
+										<bool name="owned_by_player_only" value="True" />
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+						<list name="action_table">
+							<template_reference name="action" value="action\ui_unit_modifier_action">
+								<bool name="die_with_creator" value="True" />
+								<template_reference name="ui_info" value="tables\ui_info">
+									<locstring name="screen_name" value="34" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<locstring name="help_text" value="33" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<icon name="icon_name" value="ModIcons_3690fed557b44fc68b9753c2f52ed775_time_night" />
+									<string name="hotkey_name" value="" />
+								</template_reference>
+								<uniqueid name="id" value="1073747469" />
+							</template_reference>
+							<template_reference name="action" value="action\apply_modifiers_action">
+								<float name="duration" value="0" />
+								<bool name="permanent" value="False" />
+								<list name="modifiers">
+									<template_reference name="modifier" value="modifiers\sight_radius_modifier">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.7" />
+										<instance_reference name="tooltip" value="modifier_tooltip\sight_radius_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\speed_maximum_modifier">
+										<enum name="application_type" value="apply_to_entity" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.95" />
+										<instance_reference name="tooltip" value="modifier_tooltip\speed_maximum_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\cooldown_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.65" />
+										<instance_reference name="tooltip" value="modifier_tooltip\cooldown_weapon_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\accuracy_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.75" />
+										<instance_reference name="tooltip" value="modifier_tooltip\accuracy_weapon_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\detect_global_camouflage_radius">
+										<enum name="application_type" value="apply_to_squad" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.5" />
+										<instance_reference name="tooltip" value="modifier_tooltip\detect_global_camouflage_radius" />
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073747470" />
+							</template_reference>
+						</list>
+						<uniqueid name="id" value="1073747471" />
+						<bool name="fire_and_forget_non_global" value="False" />
+						<template_reference name="ui_help_text" value="tables\help_text_phrase">
+							<int name="phrase_order" value="0" />
+							<locstring name="phrase" value="0" />
+						</template_reference>
+					</template_reference>
+					<template_reference name="action" value="action\requirement_action">
+						<bool name="check_self" value="False" />
+						<bool name="global_fire_and_forget_on_success" value="False" />
+						<bool name="instant_requirement_check" value="False" />
+						<bool name="kill_action_on_failed_requirements" value="False" />
+						<bool name="no_retrigger" value="False" />
+						<bool name="validate_all_sub_actions" value="True" />
+						<list name="requirement_table">
+							<template_reference name="required" value="requirements\required_any_in_list">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="vehicle" />
+										<template_reference name="qualify_option" value="options\none">
+										</template_reference>
+										<bool name="search_load_out" value="False" />
+										<bool name="owned_by_player_only" value="True" />
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+						<list name="action_table">
+							<template_reference name="action" value="action\ui_unit_modifier_action">
+								<bool name="die_with_creator" value="True" />
+								<template_reference name="ui_info" value="tables\ui_info">
+									<locstring name="screen_name" value="35" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<locstring name="help_text" value="36" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<icon name="icon_name" value="ModIcons_3690fed557b44fc68b9753c2f52ed775_time_night" />
+									<string name="hotkey_name" value="" />
+								</template_reference>
+								<uniqueid name="id" value="1073747472" />
+							</template_reference>
+							<template_reference name="action" value="action\apply_modifiers_action">
+								<float name="duration" value="0" />
+								<bool name="permanent" value="False" />
+								<list name="modifiers">
+									<template_reference name="modifier" value="modifiers\speed_maximum_modifier">
+										<enum name="application_type" value="apply_to_entity" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.7" />
+										<instance_reference name="tooltip" value="modifier_tooltip\speed_maximum_modifier" />
+									</template_reference>
+									<template_reference name="modifier" value="modifiers\accuracy_weapon_modifier">
+										<enum name="application_type" value="apply_to_weapon" />
+										<bool name="exclusive" value="False" />
+										<string name="modifier_id" value="" />
+										<string name="target_type_name" value="hardpoint_01" />
+										<enum name="usage_type" value="multiplication" />
+										<float name="value" value="0.8" />
+										<instance_reference name="tooltip" value="modifier_tooltip\accuracy_weapon_modifier" />
+									</template_reference>
+								</list>
+								<uniqueid name="id" value="1073747473" />
+							</template_reference>
+						</list>
+						<uniqueid name="id" value="1073747474" />
+						<bool name="fire_and_forget_non_global" value="False" />
+						<template_reference name="ui_help_text" value="tables\help_text_phrase">
+							<int name="phrase_order" value="0" />
+							<locstring name="phrase" value="0" />
+						</template_reference>
+					</template_reference>
+				</list>
+				<uniqueid name="id" value="1073747475" />
+				<bool name="fire_and_forget_non_global" value="False" />
+				<template_reference name="ui_help_text" value="tables\help_text_phrase">
+					<int name="phrase_order" value="0" />
+					<locstring name="phrase" value="0" />
+				</template_reference>
+			</template_reference>
+		</list>
+		<bool name="affects_squads" value="True" />
+	</group>
+	<uniqueid name="pbgid" value="1073741830" />
+</instance>

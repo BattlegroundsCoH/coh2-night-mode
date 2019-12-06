@@ -1,0 +1,31 @@
+name = "night_mode_victorypoints_zoom_2x_res"
+scar_file = "data:scar/winconditions/victorypoints_zoom_2x_res.scar"
+fe_name = "Night Mode - Victory Points | 2x, Z+"
+fe_priority = 0
+fe_option_name = "$3690fed557b44fc68b9753c2f52ed775:1"
+options=
+{
+	{
+		default = true,
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:2",
+		value = 500,
+	},
+	{
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:3",
+		value = 750,
+	},
+	{
+		fe_name = "$3690fed557b44fc68b9753c2f52ed775:4",
+		value = 1000,
+	},
+}
+score_display = vp_ticker
+show_time = true
+requires_vp_ticker = true
+permitted_categories = intel_bulletin + skin_pack + vehicle_decal + fatality + commander
+entity_replacements =
+{
+}
+starting_building_replacements =
+{
+}

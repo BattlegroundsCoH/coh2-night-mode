@@ -1,0 +1,352 @@
+-- Commander Tables
+g_checkedPlayers = {};
+g_commanderTable = {
+	-- AEF
+    ["aef"] = {  
+        ["usf_airborne_company"] = {
+            { remove = BP_GetAbilityBlueprint("paratroopers_paradrop_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:paratroopers_paradrop_mp") },
+			{ remove = BP_GetAbilityBlueprint("pathfinders_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:pathfinders_dispatch") },
+        },
+		["usf_armor_company"] = {
+			{ remove = BP_GetAbilityBlueprint("sherman_bulldozer_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:sherman_bulldozer_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("assault_engineer_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:assault_engineer_dispatch") },
+		},
+		["usf_forward_assault_company"] = {
+			{ remove = BP_GetAbilityBlueprint("rangers_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:rangers_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("m26_pershing_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m26_pershing_dispatch") },
+		},
+		["usf_infantry_company"] = {
+			{ remove = BP_GetAbilityBlueprint("priest_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:priest_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("m21_mortar_halftrack_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m21_mortar_halftrack_dispatch") },
+		},
+		["usf_mechanized_company"] = {
+			{ remove = BP_GetAbilityBlueprint("m21_mortar_halftrack_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m21_mortar_halftrack_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("cavalry_riflemen_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cavalry_riflemen_dispatch") },
+		},
+		["usf_recon_support_company"] = {
+			{ remove = BP_GetAbilityBlueprint("greyhound_recon_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:greyhound_recon_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("air_drop_combat_group"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:air_drop_combat_group") },
+			{ remove = BP_GetAbilityBlueprint("pathfinders_recon_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:pathfinders_recon_dispatch") },
+		},
+		["usf_rifle_company"] = {
+			
+		},
+		["usf_tactical_support_company"] = {
+			{ remove = BP_GetAbilityBlueprint("m5_quad_halftrack_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m5_quad_halftrack_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("sherman_calliope_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:sherman_calliope_dispatch") },
+		},
+		["usf_urban_assault_company"] = {
+			{ remove = BP_GetAbilityBlueprint("rangers_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:rangers_dispatch") },
+			{ remove = BP_GetAbilityBlueprint("sherman_calliope_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:sherman_calliope_dispatch") },
+		},
+    },
+	-- UKF
+	["british"] = {
+		["british_advanced_emplacement_company"] = {
+		
+		},
+		["british_artillery_company"] = {
+			{ remove = BP_GetAbilityBlueprint("observation_valentine"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:observation_valentine") },
+			{ remove = BP_GetAbilityBlueprint("sexton_dispatch_british"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:sexton_dispatch_british") },
+		},
+		["british_commando_company"] = {
+			{ remove = BP_GetAbilityBlueprint("glider_commandos_only"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:glider_commandos_only") },
+		},
+		["british_engineer_company"] = {
+			{ remove = BP_GetAbilityBlueprint("churchill_avre"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:churchill_avre") },
+		},
+		["british_lend_lease_assault_company"] = {
+			{ remove = BP_GetAbilityBlueprint("m1_81mm_mortar_dispatch_brits_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m1_81mm_mortar_dispatch_brits_mp") },
+			{ remove = BP_GetAbilityBlueprint("m5_quad_halftrack_british_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m5_quad_halftrack_british_dispatch") },
+		},
+		["british_mobile_assault_company"] = {
+			{ remove = BP_GetAbilityBlueprint("infiltration_commandos"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:infiltration_commandos") },
+			{ remove = BP_GetAbilityBlueprint("land_mattress"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:land_mattress") },
+		},
+		["british_support_company"] = {
+			{ remove = BP_GetAbilityBlueprint("breakthrough_operation"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:breakthrough_operation") },
+		},
+		["british_vanguard_company"] = {
+			{ remove = BP_GetAbilityBlueprint("breakthrough_operation"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:breakthrough_operation") },
+			{ remove = BP_GetAbilityBlueprint("glider_headquarters"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:glider_headquarters") },
+		},
+		["british_weapons_company"] = {
+			{ remove = BP_GetAbilityBlueprint("breakthrough_operation"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:breakthrough_operation") },
+			{ remove = BP_GetAbilityBlueprint("tank_hunter"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tank_hunter") },
+			{ remove = BP_GetAbilityBlueprint("fire_support_team"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:fire_support_team") },
+		},
+	},
+	-- OST
+	["german"] = {
+		["1941_tow_german_blitzkrieg"] = {
+			{ remove = BP_GetAbilityBlueprint("armor_commander"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:armor_commander") },
+		},
+		["1941_tow_german_infantry"] = {
+			{ remove = BP_GetAbilityBlueprint("stormtroopers"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:stormtroopers") },
+		},
+		["1941_tow_german_mechanized"] = {
+			{ remove = BP_GetAbilityBlueprint("armor_commander"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:armor_commander") },
+			{ remove = BP_GetAbilityBlueprint("mechanized_grenadier_group"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:mechanized_grenadier_group") },
+		},
+		["aerial_superiority_doctrine"] = {
+		
+		},
+		["assault_support_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("supply_truck"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:supply_truck") },
+			{ remove = BP_GetAbilityBlueprint("tiger_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank") },
+		},
+		["festung_armor_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("armor_commander"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:armor_commander") },
+		},
+		["festung_support_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("mortar_halftrack"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:mortar_halftrack") },
+			{ remove = BP_GetAbilityBlueprint("relief_infantry"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:relief_infantry") },
+		},
+		["fortified_armor_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("elefant_unlock"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:elefant_unlock") },
+			{ remove = BP_GetAbilityBlueprint("armor_commander"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:armor_commander") },
+		},
+		["german_air_supply"] = {
+		
+		},
+		["german_community_defense"] = {
+			{ remove = BP_GetAbilityBlueprint("ostruppen"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:ostruppen") },
+			{ remove = BP_GetAbilityBlueprint("stug_iii_e"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:stug_iii_e") },
+		},
+		["german_elite_troops"] = {
+			{ remove = BP_GetAbilityBlueprint("stormtroopers"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:stormtroopers") },
+			{ remove = BP_GetAbilityBlueprint("tiger_tank_ace"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank_ace") },
+		},
+		["german_encirclement"] = {
+			{ remove = BP_GetAbilityBlueprint("stormtroopers"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:stormtroopers") },
+		},
+		["german_infantry_assault"] = {
+			{ remove = BP_GetAbilityBlueprint("tiger_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank") },
+			{ remove = BP_GetAbilityBlueprint("stug_iii_e"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:stug_iii_e") },
+			{ remove = BP_GetAbilityBlueprint("assault_grenadiers"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:assault_grenadiers") },
+			{ remove = BP_GetAbilityBlueprint("mechanized_assault_group"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:mechanized_assault_group") },
+		},
+		["german_mobile_defense"] = {
+			{ remove = BP_GetAbilityBlueprint("armor_commander"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:armor_commander") },
+			{ remove = BP_GetAbilityBlueprint("ostruppen_reserves"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:ostruppen_reserves") },
+		},
+		["german_ostruppen_tree"] = {
+			{ remove = BP_GetAbilityBlueprint("assault_field_officer"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:assault_field_officer") },
+			{ remove = BP_GetAbilityBlueprint("ostruppen"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:ostruppen") },
+		},
+		["german_urban_assault"] = {
+		
+		},
+		["jaeger_armor_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("elefant_unlock"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:elefant_unlock") },
+		},
+		["jaeger_infantry_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("jaeger_infantry_unlock"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jaeger_infantry_unlock") },
+			{ remove = BP_GetAbilityBlueprint("jaeger_commander_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jaeger_commander_mp") },
+		},
+		["joint_operations_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("assault_field_officer"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:assault_field_officer") },
+		},
+		["lightning_war_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("jaeger_infantry_unlock"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jaeger_infantry_unlock") },
+			{ remove = BP_GetAbilityBlueprint("relief_infantry"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:relief_infantry") },
+			{ remove = BP_GetAbilityBlueprint("tiger_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank") },
+		},
+		["spearhead_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("mortar_halftrack"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:mortar_halftrack") },
+			{ remove = BP_GetAbilityBlueprint("tiger_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank") },
+		},
+		["storm_tactics_doctrine"] = {
+			
+		},
+		["strategic_reserves_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("tiger_tank_ace"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:tiger_tank_ace") },
+			{ remove = BP_GetAbilityBlueprint("assault_grenadiers"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:assault_grenadiers") },
+		},
+	},
+	-- SOV
+	["soviet"] = {
+		["1941_tow_soviet_combined_arms_army"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_guard_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_guard_troops") },
+		},
+		["1941_tow_soviet_reserve_army"] = {
+			{ remove = BP_GetAbilityBlueprint("partisans_commander_anti_vehicle"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:partisans_commander_anti_vehicle") },
+		},
+		["1941_tow_soviet_shock_army"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+			{ remove = BP_GetAbilityBlueprint("cmd_120mm_mortar_crew"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_120mm_mortar_crew") },
+		},
+		["advanced_warfare_tactics"] = {
+
+		},
+		["airbourne_troops_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("airbourne_paradrop"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:airbourne_paradrop") },
+			{ remove = BP_GetAbilityBlueprint("paradrop_weapon_crate"), add = BP_GetAbilityBlueprint("paradrop_weapon_crate") },
+			{ remove = BP_GetAbilityBlueprint("paradrop_dshk"), add = BP_GetAbilityBlueprint("paradrop_dshk") },
+			{ remove = BP_GetAbilityBlueprint("rally_points"), add = BP_GetAbilityBlueprint("rally_points") },
+			{ remove = BP_GetAbilityBlueprint("il-2_anti_tank_rockets"), add = BP_GetAbilityBlueprint("il-2_anti_tank_rockets") },
+		},
+		["anti_infantry_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+		},
+		["conscripts_support_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("rapid_conscription"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:rapid_conscription") },
+		},
+		["guard_motor_coordination_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+			{ remove = BP_GetAbilityBlueprint("cmd_120mm_mortar_crew"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_120mm_mortar_crew") },
+		},
+		["guard_rifle_anti_tank_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_guard_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_guard_troops") },
+		},
+		["mechanized_support"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_guard_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_guard_troops") },
+			{ remove = BP_GetAbilityBlueprint("cmd_isu-152"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_isu-152") },
+		},
+		["nkvd_rifle_disruption_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("commissar_officer_squad_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:commissar_officer_squad_mp") },
+		},
+		["shock_motor_heavy_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+			{ remove = BP_GetAbilityBlueprint("cmd_isu-152"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_isu-152") },
+		},
+		["shock_rifle_frontline_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+			{ remove = BP_GetAbilityBlueprint("cmd_is2_heavy_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_is2_heavy_tank") },
+		},
+		["soviet_community_defense"] = {
+			{ remove = BP_GetAbilityBlueprint("dshk_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:dshk_mp") },
+			{ remove = BP_GetAbilityBlueprint("cmd_120mm_mortar_crew"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_120mm_mortar_crew") },
+			{ remove = BP_GetAbilityBlueprint("m-42_at_gun"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m-42_at_gun") },
+		},
+		["soviet_counterattack"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+		},
+		["soviet_industry_commander"] = {
+			{ remove = BP_GetAbilityBlueprint("kv-2"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:kv-2") },
+		},
+		["soviet_lend_lease"] = {
+			{ remove = BP_GetAbilityBlueprint("dshk_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:dshk_mp") },
+			{ remove = BP_GetAbilityBlueprint("m5_halftrack_assault"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m5_halftrack_assault") },
+		},
+		["soviet_no_retreat"] = {
+			{ remove = BP_GetAbilityBlueprint("commissar_squad_mp"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:commissar_squad_mp") },
+		},
+		["soviet_partisan"] = {
+			{ remove = BP_GetAbilityBlueprint("partisans_commander_anti_infantry"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:partisans_commander_anti_infantry") },
+			{ remove = BP_GetAbilityBlueprint("partisans_commander_anti_vehicle"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:partisans_commander_anti_vehicle") },
+		},
+		["soviet_tank_hunters"] = {
+			
+		},
+		["soviet_urban"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+			{ remove = BP_GetAbilityBlueprint("m-42_at_gun"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:m-42_at_gun") },
+			{ remove = BP_GetAbilityBlueprint("kv-2"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:kv-2") },
+		},
+		["soviet_war_machine"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_is2_heavy_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_is2_heavy_tank") },
+		},
+		["terror_tactics"] = {
+			{ remove = BP_GetAbilityBlueprint("cmd_shock_troops"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:cmd_shock_troops") },
+		},
+	},
+	-- OKW
+	["west_german"] = {
+		["okw_battlefield_reconnaissance_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("jaeger_light_infantry_recon_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jaeger_light_infantry_recon_dispatch") },
+			
+		},
+		["okw_breakthrough_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("jagdtiger"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jagdtiger") },
+			{ remove = BP_GetAbilityBlueprint("terror_officer"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:terror_officer") },
+		},
+		["okw_elite_armored_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("sturmtiger_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:sturmtiger_dispatch") },
+		},
+		["okw_firestorm_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("opel_blitz_reinforce_truck_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:opel_blitz_reinforce_truck_dispatch") },
+		},
+		["okw_fortifications_doctrine"] = {
+		
+		},
+		["okw_grand_offensive_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("west_german_tiger_tank"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:west_german_tiger_tank") },
+		},
+		["okw_luftwaffe_ground_forces_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("fallschirmjaeger"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:fallschirmjaeger") },
+			{ remove = BP_GetAbilityBlueprint("airborne_assault"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:airborne_assault") },
+		},
+		["okw_scavenge_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("jaeger_light_infantry_recon_dispatch"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:jaeger_light_infantry_recon_dispatch") },
+		},
+		["okw_special_operations_doctrine"] = {
+			{ remove = BP_GetAbilityBlueprint("flare_artillery"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:flare_artillery") },
+			{ remove = BP_GetAbilityBlueprint("command_panther"), add = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:command_panther") },
+		},
+	},
+};
+ 
+-- Replace the abilities
+function Util_GetCommander(player)
+ 
+    local faction = Player_GetRaceName(player);
+ 
+    for k, v in pairs(g_commanderTable[faction]) do
+        local match = 0;
+        for i=1, #v do
+            if (Player_HasAbility(player, v[i].remove)) then
+                match = match + 1;
+            end
+        end
+        if match == #v then
+            return k;
+        end
+    end
+ 
+    return nil;
+ 
+end
+ 
+function Util_ReplaceCommander(player, commander)
+ 
+    local faction = Player_GetRaceName(player);
+ 
+    for i=1, #g_commanderTable[faction][commander] do
+        Util_ReplaceAbility(player, g_commanderTable[faction][commander][i].remove, g_commanderTable[faction][commander][i].add);
+    end
+ 
+end
+ 
+function Util_ReplaceAbility(player, ability_remove, ability_add)
+ 
+    -- Remove ability
+    Player_SetAbilityAvailability( player, ability_remove, ITEM_REMOVED );
+ 
+    -- Add ability (and incase we removed it, re-add it)
+    Player_SetAbilityAvailability( player, ability_add, ITEM_DEFAULT  );
+    Player_AddAbility( player, ability_add );
+ 
+ 
+end
+ 
+function _run_alaways()
+ 
+    for i = 1, World_GetPlayerCount() do
+ 
+        local player = World_GetPlayerAt(i);
+ 
+        if g_checkedPlayers[Player_GetID(player)] == nil then
+           
+            local selected_commander = Util_GetCommander(player);
+ 
+            if selected_commander ~= nil then
+                Util_ReplaceCommander(player, selected_commander);
+                g_checkedPlayers[Player_GetID(player)] = true;
+            end
+ 
+        end
+ 
+    end
+ 
+end
