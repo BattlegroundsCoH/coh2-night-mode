@@ -1,6 +1,6 @@
 import("ScarUtil.scar");
 
-function HookNightMode()
+function NM_HookNightMode()
 
     nm_blueprintlist = {
         ["mortar_team_81mm_mp"] = BP_GetAbilityBlueprint("mortar_fire_flares_ability_mp"),
@@ -13,7 +13,7 @@ function HookNightMode()
 
 end
 
-Scar_AddInit(HookNightMode);
+--Scar_AddInit(NM_HookNightMode);
 
 function NM_HookPlayer(player)
     local pid = Player_GetID(player);

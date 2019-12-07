@@ -53,53 +53,18 @@ daynightcycle.supportedMods = {
         day = "3690fed557b44fc68b9753c2f52ed775:bge_time_day", 
     },
 };
-
-daynightcycle.setup = function()
-    
-    -- Init daynight cycle
-    daynightcycle.init();
-
-    -- Get the active mod
-    daynightcycle.activeMod = daynightcycle.GetActiveMod();
-
-    -- Fetch day/night upgrades
-    daynightcycle.upgrades = {
-        day = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].day),
-        night = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].night),
-    };
-    
-    if (Dev_Night_Mode == true) then -- Some dev stuff
-    
-        for i=1, World_GetPlayerCount() do
-            local player = World_GetPlayerAt(i);
-            if (Player_GetRaceName(player) == "west_german") then
-                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
-            elseif (Player_GetRaceName(player) == "german") then
-                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
-            elseif (Player_GetRaceName(player) == "aef") then
-                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
-            elseif (Player_GetRaceName(player) == "british") then
-                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
-            elseif (Player_GetRaceName(player) == "soviet") then
-                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
-            end
-        end
-          
-    end
-    
-    -- Create night aura buffer/debuffer
-    Util_CreateEntities( nil, nil, BP_GetEntityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_aura_night_debuff"), World_Pos(0, 0, 0), 1, nil );
-
-end
-
-Scar_AddInit(daynightcycle.setup);
+daynightcycle.initialNight = {
+    "",
+}
 
 daynightcycle.init = function()
-   
+    
+    -- Setup seasonal data
     daynightcycle.currentseason = {}; -- Seasonal data
     daynightcycle.updateTime = 7.5 * 60; -- Update time (How often should we cycle between day and night)
     daynightcycle.transitionTime = 2 * 60; -- The time to transition from one atmosphere to another
    
+    -- Are we playing on a winter map (Equal to calling World_IsWinterMap)
     if (g_isWinterMap == true) then
    
         -- Set winter temperatures
@@ -123,22 +88,203 @@ daynightcycle.init = function()
         daynightcycle.currentseason.chanceofrain = 0; -- 0 = none \ 100 = big chance
  
     end
-       
-    -- setting the Time of day
-    daynightcycle.Time = daynightcycle.NIGHT; -- this is what makes the most sense
-    
+
     -- some standard weather things
     daynightcycle.snowtempature = (-5);
     
     -- Create a timer ID
     daynightcycle.timerID = "__NMTIMER_WEATHER";
 
+    -- Get the active mod
+    daynightcycle.activeMod = daynightcycle.GetActiveMod();
+
+    NM_HookNightMode();
+
+    -- Fetch day/night upgrades
+    daynightcycle.upgrades = {
+        day = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].day),
+        night = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].night),
+    };
+    
+    -- Is dev mode enabled?
+    if (Dev_Night_Mode == true) then
+    
+        -- Grant DEV upgrade to all players
+        for i=1, World_GetPlayerCount() do
+            local player = World_GetPlayerAt(i);
+            if (Player_GetRaceName(player) == "west_german") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "german") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "aef") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "british") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "soviet") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            end
+        end
+          
+    end
+    
+    -- Create night aura buffer/debuffer
+    Util_CreateEntities( nil, nil, BP_GetEntityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_aura_night_debuff"), World_Pos(0, 0, 0), 1, nil );
+
+    -- setting the Time of day
+    daynightcycle.time = daynightcycle.GetInitialTime();
+
+    -- Do we start on a night map?
+    if daynightcycle.time == daynightcycle.DAY then
+        
+        -- Call SetNight to apply night buffer
+        SetNight();
+
+    end
+
     -- Start a timer so the UI can update properly
     Timer_Start(daynightcycle.timerID, daynightcycle.updateTime);
     
     -- Add interval to update time
     Rule_AddInterval(UpdateDayNightCycle, daynightcycle.updateTime);
+
+end
+
+Scar_AddInit(daynightcycle.init);
+
+daynightcycle.atmosphereTable = {}
+daynightcycle.atmosphereTable.snow = {}
+daynightcycle.atmosphereTable.normal = {}
+daynightcycle.atmosphereTable.rain = {}
  
+daynightcycle.atmosphereTable.snow.DAY = {
+    "_fe_winter_wreck.aps",
+    "xxxx.aps",
+    "winter_frozenscrum.aps",
+}
+daynightcycle.atmosphereTable.snow.NIGHT = {
+    "winter_night_snowy.aps",
+    "tow_cnd_night_01.aps",
+    "dlc/tow_tiger_ace_night.aps",
+}
+daynightcycle.atmosphereTable.rain.DAY = {
+    "_fe_lake_urban_tanks.aps",
+    "dlc/mp_semois_rainfall.aps",
+    "dlc/tow_heavy_rain_battle.aps",
+}
+daynightcycle.atmosphereTable.rain.NIGHT = {
+    "cxp1_caen_night_00.aps",
+    "dlc/tow_mudroad311_lightning.aps",
+    "dlc/tow_heavy_rain_battle.aps",
+}
+daynightcycle.atmosphereTable.normal.DAY = {
+    "_sep.aps",
+    "winter_morning_overcast.aps",
+    "dlc/mp_semois.aps",
+}
+daynightcycle.atmosphereTable.normal.NIGHT = {
+    "winter_night_clear.aps",
+    "winter_night_clear.aps",
+    "winter_night_clear.aps",
+}
+ 
+daynightcycle.GetAtmosphere = function(weather)
+ 
+    if (weather == "snow") then -- its from the snow table we have to take from
+       
+        if (daynightcycle.time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.snow.DAY[World_GetRand(1, #daynightcycle.atmosphereTable.snow.DAY)];
+        elseif (daynightcycle.time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.snow.NIGHT[World_GetRand(1, #daynightcycle.atmosphereTable.snow.NIGHT)];
+        end
+       
+    elseif (weather == "RAIN") then
+       
+        if (daynightcycle.time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.rain.DAY[World_GetRand(1, #daynightcycle.atmosphereTable.rain.DAY)];
+        elseif (daynightcycle.time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.rain.NIGHT[World_GetRand(1, #daynightcycle.atmosphereTable.rain.NIGHT)];
+        end
+       
+    elseif (weather == nil) then
+       
+        if (daynightcycle.time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.normal.DAY[World_GetRand(1, #daynightcycle.atmosphereTable.normal.DAY)];
+        elseif (daynightcycle.time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.atmosphereTable.normal.NIGHT[World_GetRand(1, #daynightcycle.atmosphereTable.normal.NIGHT)];
+        end
+       
+    end
+ 
+end
+ 
+daynightcycle.GetCurrentAtmosphere = function()
+    return daynightcycle.curreantatmos;
+end
+ 
+daynightcycle.GetTimeOFDay = function()
+    return daynightcycle.time;
+end
+
+daynightcycle.GetActiveMod = function()
+
+    -- For all possible mods
+    for k, v in pairs(daynightcycle.supportedMods) do
+
+        -- Try (with a protected call) to check if we can access the entity that shows compatibility
+        if pcall(BP_GetEntityBlueprint, v.comp) then
+
+            -- Return mod name
+            return k;
+
+        end
+
+    end
+
+    -- Return "Vanilla" as active mod
+    return "Vanilla";
+
+end
+
+daynightcycle.GetInitialTime = function()
+    local scenario = Stats_GetScenarioName(); -- Get the file name of the scenario, this function is undocumented for some reason. Though it works :P
+    for i = 1, #daynightcycle.initialNight do
+        if (daynightcycle.initialNight[i] == scenario) then
+            return daynightcycle.DAY;
+        end
+    end
+    return daynightcycle.NIGHT;
+end
+
+function SetNight()
+
+    -- For all players
+    for i=1, World_GetPlayerCount() do
+
+        -- Get player
+        local player = World_GetPlayerAt(i);
+        
+        -- Remove day upgrade and upgrade night upgrade
+        Player_RemoveUpgrade(player, daynightcycle.upgrades.day);
+        Cmd_InstantUpgrade(player, daynightcycle.upgrades.night, 1);
+
+    end
+
+end
+ 
+function SetDay()
+
+    -- For all players
+    for i=1, World_GetPlayerCount() do
+
+        -- Get player
+        local player = World_GetPlayerAt(i);
+
+        -- Remove night upgrade and upgrade day upgrade
+        Player_RemoveUpgrade(player, daynightcycle.upgrades.night);
+        Cmd_InstantUpgrade(player, daynightcycle.upgrades.day, 1);
+        
+    end
+
 end
 
 function UpdateDayNightCycle()
@@ -188,123 +334,25 @@ function UpdateDayNightCycle()
         end
     end
  
-    if (daynightcycle.Time == daynightcycle.NIGHT) then
-        daynightcycle.Time = daynightcycle.DAY;
-        Rule_AddOneShot(daynightcycle.SetNight, 30);
+    if (daynightcycle.time == daynightcycle.NIGHT) then
+        daynightcycle.time = daynightcycle.DAY;
+        Rule_AddOneShot(SetNight, 30);
     else
-        daynightcycle.Time = daynightcycle.NIGHT;
-        Rule_AddOneShot(daynightcycle.SetDay, 30);
+        daynightcycle.time = daynightcycle.NIGHT;
+        Rule_AddOneShot(SetDay, 30);
     end
    
     Game_UnLockRandom();
    
 end
  
-daynightcycle.AtmosphereTable = {}
-daynightcycle.AtmosphereTable.Snow = {}
-daynightcycle.AtmosphereTable.normal = {}
-daynightcycle.AtmosphereTable.rain = {}
- 
-daynightcycle.AtmosphereTable.Snow.DAY = {
-    "_fe_winter_wreck.aps",
-    "xxxx.aps",
-    "winter_frozenscrum.aps",
-}
-daynightcycle.AtmosphereTable.Snow.NIGHT = {
-    "winter_night_snowy.aps",
-    "tow_cnd_night_01.aps",
-    "dlc/tow_tiger_ace_night.aps",
-}
-daynightcycle.AtmosphereTable.rain.DAY = {
-    "_fe_lake_urban_tanks.aps",
-    "dlc/mp_semois_rainfall.aps",
-    "dlc/tow_heavy_rain_battle.aps",
-}
-daynightcycle.AtmosphereTable.rain.NIGHT = {
-    "cxp1_caen_night_00.aps",
-    "dlc/tow_mudroad311_lightning.aps",
-    "dlc/tow_heavy_rain_battle.aps",
-}
-daynightcycle.AtmosphereTable.normal.DAY = {
-    "_sep.aps",
-    "winter_morning_overcast.aps",
-    "dlc/mp_semois.aps",
-}
-daynightcycle.AtmosphereTable.normal.NIGHT = {
-    "winter_night_clear.aps",
-    "winter_night_clear.aps",
-    "winter_night_clear.aps",
-}
- 
-daynightcycle.GetAtmosphere = function(weather)
- 
-    if (weather == "SNOW") then -- its from the snow table we have to take from
-       
-        if (daynightcycle.Time == daynightcycle.DAY) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.Snow.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.Snow.DAY)];
-        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.Snow.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.Snow.NIGHT)];
-        end
-       
-    elseif (weather == "RAIN") then
-       
-        if (daynightcycle.Time == daynightcycle.DAY) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.rain.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.rain.DAY)];
-        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.rain.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.rain.NIGHT)];
-        end
-       
-    elseif (weather == nil) then
-       
-        if (daynightcycle.Time == daynightcycle.DAY) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.normal.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.normal.DAY)];
-        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
-            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.normal.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.normal.NIGHT)];
-        end
-       
+-- For mappers who wish to make the map compatible
+-- Usage: pcall(NMAPI_SetTime, "day") or pcall(NMAPI_SetTime, "night")
+function NMAPI_SetTime(time)
+    if time == "day" then
+        daynightcycle.time = daynightcycle.DAY;
+    elseif time == "night" then
+        daynightcycle.time = daynightcycle.NIGHT;
+        SetNight();
     end
- 
-end
- 
-daynightcycle.GetCurrentAtmosphere = function()
-    return daynightcycle.curreantatmos;
-end
- 
-daynightcycle.SetNight = function()
-    for i=1, World_GetPlayerCount() do
-        local player = World_GetPlayerAt(i);
-        
-        Player_RemoveUpgrade(player, daynightcycle.upgrades.day);
-        Cmd_InstantUpgrade(player, daynightcycle.upgrades.night, 1);
-
-    end
-end
- 
-daynightcycle.SetDay = function()
-    for i=1, World_GetPlayerCount() do
-        local player = World_GetPlayerAt(i);
-
-        Player_RemoveUpgrade(player, daynightcycle.upgrades.day);
-        Cmd_InstantUpgrade(player, daynightcycle.upgrades.night, 1);
-        
-    end
-end
- 
-daynightcycle.GetTimeOFDay = function()
-    return daynightcycle.Time;
-end
-
-daynightcycle.GetActiveMod = function()
-
-    for i=1, World_GetPlayerCount() do
-        local player = World_GetPlayerAt(i);
-        for k, v in pairs(daynightcycle.supportedMods) do
-            if pcall(BP_GetEntityBlueprint, v.comp) then
-                return k;
-            end
-        end
-    end
-
-    return "Vanilla";
-
 end
