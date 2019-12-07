@@ -774,10 +774,10 @@
 												<instance_reference name="tooltip" value="modifier_tooltip\accuracy_weapon_modifier" />
 											</template_reference>
 										</list>
-										<uniqueid name="id" value="1073747497" />
+										<uniqueid name="id" value="1073747516" />
 									</template_reference>
 								</list>
-								<uniqueid name="id" value="1073747498" />
+								<uniqueid name="id" value="1073747517" />
 								<bool name="fire_and_forget_non_global" value="False" />
 								<template_reference name="ui_help_text" value="tables\help_text_phrase">
 									<int name="phrase_order" value="0" />
@@ -786,7 +786,7 @@
 							</template_reference>
 						</list>
 						<enum name="change_target_type" value="entities" />
-						<uniqueid name="id" value="1073747499" />
+						<uniqueid name="id" value="1073747518" />
 					</template_reference>
 				</list>
 			</group>
@@ -864,11 +864,11 @@
 												<instance_reference name="tooltip" value="modifier_tooltip\blank_tooltip" />
 											</template_reference>
 										</list>
-										<uniqueid name="id" value="1073747500" />
+										<uniqueid name="id" value="1073747519" />
 									</template_reference>
 									<template_reference name="action" value="action\scar_function_call">
 										<string name="function_name" value="XP1_Vet_Level1" />
-										<uniqueid name="id" value="1073747501" />
+										<uniqueid name="id" value="1073747520" />
 									</template_reference>
 								</list>
 								<list name="squad_entity_actions">
@@ -898,7 +898,7 @@
 												<instance_reference name="tooltip" value="modifier_tooltip\blank_tooltip" />
 											</template_reference>
 										</list>
-										<uniqueid name="id" value="1073747502" />
+										<uniqueid name="id" value="1073747521" />
 									</template_reference>
 									<template_reference name="action" value="action\scar_function_call">
 										<string name="function_name" value="XP1_Vet_Level2" />
