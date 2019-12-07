@@ -2,18 +2,26 @@ import("ScarUtil.scar");
 
 function NM_HookNightMode()
 
+    -- list of blueprints to add new flare ability to
     nm_blueprintlist = {
-        ["mortar_team_81mm_mp"] = BP_GetAbilityBlueprint("mortar_fire_flares_ability_mp"),
+        ["mortar_team_81mm_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:mortar_team_81mm_nm"),
     };
+    
+    -- Players to keep track of
     nm_players = {};
 
+    -- For all players
     for i = 1, World_GetPlayerCount() do
-        NM_HookPlayer(World_GetPlayerAt(i));
+        
+        -- Get player pointer
+        local player = World_GetPlayerAt(i);
+
+        -- 'hook' player
+        NM_HookPlayer(player);
+
     end
 
 end
-
---Scar_AddInit(NM_HookNightMode);
 
 function NM_HookPlayer(player)
     local pid = Player_GetID(player);
@@ -39,8 +47,20 @@ function NM_CheckPlayers()
 end
 
 function NM_SquadSpawned(sgroupid, itemindex, squadID)
-    local abp = nm_blueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
-    if (abp ~= nil ) then
-        Squad_AddAbility(squadID, abp); 
+    local sbp = nm_blueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
+    if (sbp ~= nil ) then
+        
+        local pos = Squad_GetPosition(squadID);
+        local posTarget = pos;
+        
+        if (Squad_HasDestination(squadID)) then
+            Squad_GetDestination(squadID);
+        end
+
+        local player = Squad_GetPlayerOwner(squadID);
+
+        Squad_DeSpawn(squadID);
+        Squad_CreateAndSpawnToward( sbp, player, 0, pos, posTarget );
+
     end
 end

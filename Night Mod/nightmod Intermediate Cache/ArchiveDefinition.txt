@@ -49,6 +49,7 @@ TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 		Override wildcard=".*\.(rgd)$" minsize="-1" maxsize="-1" vt="sha1_blocks" ct="buffer_compress"
 	FileSettingsEnd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\german\modal_ability\mortar_fire_flares_ability_mp.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\light_remove_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\bge_night_debuff.rgd
@@ -58,6 +59,8 @@ TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_mortars.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_night_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\gameplay\buildable_campfire_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\german\team_weapons\granatewerfer_34_81mm_mortar_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\german\soldiers\mortar_team\mortar_team_81mm_nm.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_debuff_slotitem.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd

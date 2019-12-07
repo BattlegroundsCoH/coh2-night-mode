@@ -55,11 +55,11 @@
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\daynightcycle.scar</FileName>
-			<FileHash>13edc71faf5ed089d027a274343eef82</FileHash>
+			<FileHash>59983487f6167060a6b5bc38ceba23fc</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\nightmode_dyn.scar</FileName>
-			<FileHash>6f6a8f2fd27184712f2a9ec16bdb7091</FileHash>
+			<FileHash>63061996615c10c761a079f80139708c</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints.scar</FileName>
@@ -99,7 +99,7 @@
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\locale\english\english.ucs</FileName>
-			<FileHash>b8f811f9c70bb1a092d57970522951af</FileHash>
+			<FileHash>99763e4e6893b0af54177447e5f74fe8</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\nightmodattrib.xml</FileName>
@@ -108,6 +108,10 @@
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\nm_dev.xml</FileName>
 			<FileHash>1cc6aef8eb15ee311d9c46b708dd6646</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\german\modal_ability\mortar_fire_flares_ability_mp.xml</FileName>
+			<FileHash>352ef4883816d669ac56d1ba8702228f</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\light_remove_debuff.xml</FileName>
@@ -144,6 +148,14 @@
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\gameplay\buildable_campfire_mp.xml</FileName>
 			<FileHash>4e5e1f1c2245ee88b331b7dcdf3eafd5</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\german\team_weapons\granatewerfer_34_81mm_mortar_mp.xml</FileName>
+			<FileHash>02a015fa8fd139c87269a9edd5b8a74a</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\german\soldiers\mortar_team\mortar_team_81mm_nm.xml</FileName>
+			<FileHash>99aadf55f4fc02e2da07c5545cd0ffbf</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\slot_item\global\time_night_debuff_slotitem.xml</FileName>

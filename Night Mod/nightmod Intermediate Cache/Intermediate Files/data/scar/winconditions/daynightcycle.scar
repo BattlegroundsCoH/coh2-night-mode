@@ -18,7 +18,7 @@ daynightcycle.curreantatmos = nil; -- The current atmoshphere file
 daynightcycle.atmospherefolder = "data:art/scenarios/presets/atmosphere/"; -- Folder to load atmospheres from
 daynightcycle.supportedMods = {
     ["Vanilla"] = { 
-        comp = "78092040bb27420d8edec1072f96db4c:night_mode_compatibility", -- Compatability Entity
+        comp = nil, -- Compatability Entity
         night = "3690fed557b44fc68b9753c2f52ed775:time_night", -- Night upgrade
         day = "3690fed557b44fc68b9753c2f52ed775:time_day", -- Day upgrade
     },
@@ -230,11 +230,16 @@ daynightcycle.GetActiveMod = function()
     -- For all possible mods
     for k, v in pairs(daynightcycle.supportedMods) do
 
-        -- Try (with a protected call) to check if we can access the entity that shows compatibility
-        if pcall(BP_GetEntityBlueprint, v.comp) then
+        -- No reason to check if it's nil
+        if v.comp ~= nil then
+            
+            -- Try (with a protected call) to check if we can access the entity that shows compatibility
+            if pcall(BP_GetEntityBlueprint, v.comp) then
 
-            -- Return mod name
-            return k;
+                -- Return mod name
+                return k;
+
+            end
 
         end
 
