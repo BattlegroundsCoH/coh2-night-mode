@@ -2,18 +2,36 @@ import("ScarUtil.scar");
 
 function NM_HookNightMode()
 
+    -- list of blueprints to add new flare ability to
     nm_blueprintlist = {
         ["mortar_team_81mm_mp"] = BP_GetAbilityBlueprint("mortar_fire_flares_ability_mp"),
     };
+    
+    -- List of abilities to remove from game
+    nm_hidelist = {
+        BP_GetAbilityBlueprint("mortar_fire_flares_ability_mp");
+    };
+
+    -- Players to keep track of
     nm_players = {};
 
+    -- For all players
     for i = 1, World_GetPlayerCount() do
-        NM_HookPlayer(World_GetPlayerAt(i));
+        
+        -- Get player pointer
+        local player = World_GetPlayerAt(i);
+
+        -- Remove all abilities
+        for j = 1, #nm_hidelist do
+            Player_SetAbilityAvailability(player, nm_hidelist[j], ITEM_REMOVED);
+        end
+
+        -- 'hook' player
+        NM_HookPlayer(player);
+
     end
 
 end
-
---Scar_AddInit(NM_HookNightMode);
 
 function NM_HookPlayer(player)
     local pid = Player_GetID(player);
