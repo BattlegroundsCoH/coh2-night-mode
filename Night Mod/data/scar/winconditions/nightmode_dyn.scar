@@ -59,6 +59,6 @@ end
 function NM_SquadSpawned(sgroupid, itemindex, squadID)
     local abp = nm_blueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
     if (abp ~= nil ) then
-        Squad_AddAbility(squadID, abp); 
+        Squad_AddAbility(squadID, abp);
     end
 end
