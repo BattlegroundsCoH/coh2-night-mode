@@ -12,7 +12,7 @@ Github repository of for the Nightmode "wincondition" pack. Here are all the .sc
 ## For Modders
 Wish to make your tuning mod compatible with the night mode mod?
 If so, you can contact @RagnarTheEverchosen or @JustCodiex. At the moment, all we need is your mod's GUID.
-Then make an entity called 'nightmode_compatibility_check'. Additionally, make two new upgrades. 'nigtmode_day' and 'nigtmode_night'. Those upgrades will be used to tell when it's day and when it's night.
+Then make an entity called 'night_mode_compatibility'. Additionally, make two new upgrades. 'nightmode_day' and 'nightmode_night'. Those upgrades will be used to tell when it's day and when it's night.
 ##### Flares
 If you wish to implement flares, or any other light sources that remove the night modifier, give the squad the slot item 'dummy_slot_item' when near your light source (You'll have to handle the implementation of that on your own). We'll then use that slot item to determine if the night modifier should be applied or not.
 
