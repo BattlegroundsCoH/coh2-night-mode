@@ -30,7 +30,7 @@
 							</list>
 							<list name="action_table">
 								<template_reference name="action" value="action\sequence_action">
-									<uniqueid name="id" value="1073747496" />
+									<uniqueid name="id" value="1073747499" />
 									<list name="action_list_sequences">
 										<list name="actions">
 											<template_reference name="action" value="action\artillery_attack">
@@ -43,7 +43,7 @@
 												<float name="num_salvo" value="1" />
 												<float name="use_hardpoint" value="4" />
 												<bool name="face_to_target" value="True" />
-												<uniqueid name="id" value="1073747503" />
+												<uniqueid name="id" value="1073747500" />
 												<bool name="target_override_direction_times_max_range" value="False" />
 											</template_reference>
 										</list>
@@ -57,7 +57,7 @@
 													<template_reference name="target_info" value="type_ability_target_type\all">
 													</template_reference>
 												</group>
-												<uniqueid name="id" value="1073747504" />
+												<uniqueid name="id" value="1073747501" />
 												<template_reference name="spawn_attached_option" value="options\none">
 												</template_reference>
 												<list name="spawned_entity_actions">
@@ -72,8 +72,21 @@
 									</list>
 									<bool name="run_now" value="True" />
 								</template_reference>
+								<template_reference name="action" value="action\add_aura">
+									<instance_reference name="aura" value="aura\global\light_remove_debuff" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<group name="area_info">
+										<float name="angle_left" value="0" />
+										<float name="angle_right" value="0" />
+										<enum name="area_type" value="circle" />
+										<float name="radius" value="35" />
+									</group>
+									<template_reference name="target_info" value="type_ability_target_type\all">
+									</template_reference>
+									<bool name="permanent" value="True" />
+									<uniqueid name="id" value="1073747502" />
+								</template_reference>
 							</list>
-							<uniqueid name="id" value="1073747495" />
+							<uniqueid name="id" value="1073747498" />
 							<bool name="fire_and_forget_non_global" value="False" />
 							<template_reference name="ui_help_text" value="tables\help_text_phrase">
 								<int name="phrase_order" value="0" />
@@ -82,7 +95,7 @@
 						</template_reference>
 					</list>
 					<enum name="change_target_type" value="entities" />
-					<uniqueid name="id" value="1073747494" />
+					<uniqueid name="id" value="1073747497" />
 				</template_reference>
 			</list>
 		</group>
@@ -188,6 +201,36 @@
 					</template_reference>
 				</list>
 			</template_reference>
+			<template_reference name="required" value="requirements\required_any_in_list">
+				<enum name="reason" value="usage" />
+				<locstring name="ui_name" value="45" mod="3690fed557b44fc68b9753c2f52ed775" />
+				<list name="requirements">
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\au_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\wwii_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+				</list>
+			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_none" />
 		<int name="ui_position" value="34" />
@@ -222,5 +265,5 @@
 		<bool name="can_cast_outside_active_battle_field" value="False" />
 		<bool name="ability_super_event_cue" value="False" />
 	</group>
-	<uniqueid name="pbgid" value="1073741840" />
+	<uniqueid name="pbgid" value="1073741839" />
 </instance>

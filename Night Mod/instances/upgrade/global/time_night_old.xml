@@ -52,7 +52,7 @@
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\global\time_night_debuff_infantry" mod="3690fed557b44fc68b9753c2f52ed775" />
+								<instance_reference name="upgrade" value="upgrade\global\time_night_debuff_infantry_old" mod="3690fed557b44fc68b9753c2f52ed775" />
 								<uniqueid name="id" value="1073747346" />
 							</template_reference>
 						</list>
@@ -69,7 +69,7 @@
 							<template_reference name="action" value="action\upgrade_add">
 								<bool name="apply_to_entities_in_squad" value="False" />
 								<bool name="trigger_publish_event" value="False" />
-								<instance_reference name="upgrade" value="upgrade\global\time_night_debuff_vehicle" mod="3690fed557b44fc68b9753c2f52ed775" />
+								<instance_reference name="upgrade" value="upgrade\global\time_night_debuff_vehicle_old" mod="3690fed557b44fc68b9753c2f52ed775" />
 								<uniqueid name="id" value="1073747348" />
 							</template_reference>
 						</list>

@@ -9,13 +9,35 @@
 				<bool name="no_retrigger" value="False" />
 				<bool name="validate_all_sub_actions" value="True" />
 				<list name="requirement_table">
-					<template_reference name="required" value="requirements\required_player_upgrade">
+					<template_reference name="required" value="requirements\required_any_in_list">
 						<enum name="reason" value="usage" />
 						<locstring name="ui_name" value="0" />
-						<bool name="is_present" value="True" />
-						<float name="max_completed" value="100" />
-						<float name="min_completed" value="1" />
-						<instance_reference name="upgrade_name" value="upgrade\global\time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_player_upgrade">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<bool name="is_present" value="True" />
+								<float name="max_completed" value="100" />
+								<float name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\global\time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_player_upgrade">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<bool name="is_present" value="True" />
+								<float name="max_completed" value="100" />
+								<float name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\global\mod_support\au_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_player_upgrade">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<bool name="is_present" value="True" />
+								<float name="max_completed" value="100" />
+								<float name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\global\mod_support\wwii_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+							</template_reference>
+						</list>
 					</template_reference>
 				</list>
 				<list name="action_table">
@@ -54,7 +76,7 @@
 						<uniqueid name="id" value="1073741831" />
 					</template_reference>
 					<template_reference name="action" value="action\slot_item_add">
-						<instance_reference name="slot_item" value="slot_item\global\time_night_debuff_slotitem" mod="3690fed557b44fc68b9753c2f52ed775" />
+						<instance_reference name="slot_item" value="slot_item\dummy_slot_item" />
 						<bool name="permanent" value="False" />
 						<uniqueid name="id" value="1073741832" />
 					</template_reference>
