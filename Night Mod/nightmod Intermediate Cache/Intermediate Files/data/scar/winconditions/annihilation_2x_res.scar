@@ -6,6 +6,7 @@ import("WinConditions/Annihilate.scar")
 import("Prototype/SpecialAEFunctions.scar")
 import("PrintOnScreen.scar")
 --import("winconditions/commandertables.scar")
+import("WinConditions/nightmode_dyn.scar");
 
 Day_Night_Cycle = true;
 Dev_Night_Mode = false;

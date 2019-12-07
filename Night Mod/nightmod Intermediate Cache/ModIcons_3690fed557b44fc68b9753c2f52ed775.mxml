@@ -2,11 +2,11 @@
 <display:MovieClip xmlns:fx='http://ns.adobe.com/mxml/2009' xmlns:display='flash.display.*'>
 	<fx:Script>
 		<![CDATA[
-		[Embed(source='D:/coh2_projects/Night Mod/data/ui/flares_discount.png')]
+		[Embed(source='E:/CoH2NightMode/Night Mod/data/ui/flares_discount.png')]
 		public static var flares_discount:Class;
-		[Embed(source='D:/coh2_projects/Night Mod/data/ui/glo_developer.png')]
+		[Embed(source='E:/CoH2NightMode/Night Mod/data/ui/glo_developer.png')]
 		public static var glo_developer:Class;
-		[Embed(source='D:/coh2_projects/Night Mod/data/ui/time_night.png')]
+		[Embed(source='E:/CoH2NightMode/Night Mod/data/ui/time_night.png')]
 		public static var time_night:Class;
 		]]>
 	</fx:Script>

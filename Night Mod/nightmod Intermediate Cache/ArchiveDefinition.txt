@@ -10,62 +10,64 @@ TOCStart name="data" alias="data" path="" relativeroot="data"
 		Override wildcard=".*\.(smf)$" minsize="-1" maxsize="-1" vt="none" ct="store"
 		Override wildcard=".*\.(bsc)$" minsize="-1" maxsize="-1" vt="none" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_2x_res.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom_2x_res.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_2x_res.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom_2x_res.win
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_2x_res.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom_2x_res.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\commandertables.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_2x_res.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom_2x_res.scar
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Assets\Textures\3690fed557b44fc68b9753c2f52ed775_I3.dds
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Bin\3690fed557b44fc68b9753c2f52ed775.gfx
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\commandertables.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\daynightcycle.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\nightmode_dyn.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Assets\Textures\3690fed557b44fc68b9753c2f52ed775_I3.dds
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Bin\3690fed557b44fc68b9753c2f52ed775.gfx
 TOCEnd
 TOCStart name="info" alias="info" path="" relativeroot="info"
 	FileSettingsStart defverification="crc_blocks" defcompression="stream_compress"
 		Override wildcard=".*\.(lua)$" minsize="-1" maxsize="-1" vt="crc_blocks" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\icon.tga
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\icon.tga
 TOCEnd
 TOCStart name="locale" alias="locale" path="" relativeroot="locale"
 	FileSettingsStart defverification="crc_blocks" defcompression="stream_compress"
 	FileSettingsEnd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\locale\english\english.ucs
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\locale\english\english.ucs
 TOCEnd
 TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 	FileSettingsStart defverification="sha1_blocks" defcompression="stream_compress"
 		Override wildcard=".*\.(rgd)$" minsize="-1" maxsize="-1" vt="sha1_blocks" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\light_remove_debuff.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\bge_night_debuff.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\wwii_night_debuff.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\critical\vehicles\lights_damaged.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_flares.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_mortars.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_night_debuff.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\gameplay\buildable_campfire_mp.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_debuff_slotitem.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_infantry.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_vehicle.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_old.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_day.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_night.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\bge_time_day.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\bge_time_night.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\wwii_time_day.rgd
-	D:\coh2_projects\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\wwii_time_night.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\light_remove_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\bge_night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\wwii_night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\critical\vehicles\lights_damaged.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_flares.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_mortars.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\gameplay\buildable_campfire_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_debuff_slotitem.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_infantry.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_vehicle.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_old.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_day.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_night.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\bge_time_day.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\bge_time_night.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\wwii_time_day.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\wwii_time_night.rgd
 TOCEnd

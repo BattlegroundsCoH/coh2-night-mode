@@ -1,0 +1,46 @@
+import("ScarUtil.scar");
+
+function HookNightMode()
+
+    nm_blueprintlist = {
+        ["mortar_team_81mm_mp"] = BP_GetAbilityBlueprint("mortar_fire_flares_ability_mp"),
+    };
+    nm_players = {};
+
+    for i = 1, World_GetPlayerCount() do
+        NM_HookPlayer(World_GetPlayerAt(i));
+    end
+
+end
+
+Scar_AddInit(HookNightMode);
+
+function NM_HookPlayer(player)
+    local pid = Player_GetID(player);
+    nm_players[pid] = {
+        nm_player = player,
+        player_group = SGroup_CreateIfNotFound("nm_p" ..pid),
+    };
+    if not Rule_Exists(NM_CheckPlayers) then
+        Rule_AddInterval(NM_CheckPlayers, 0.15);
+    end
+end
+
+function NM_CheckPlayers()
+    for k, v in pairs(nm_players) do
+        local sg_temp = Player_GetSquads( v.nm_player );
+        SGroup_RemoveGroup(sg_temp, v.player_group);
+        if (SGroup_Count(sg_temp) > 0) then
+            SGroup_ForEach( sg_temp, NM_SquadSpawned ); 
+            SGroup_AddGroup(v.player_group, sg_temp);
+        end
+        SGroup_Clear(sg_temp);
+    end
+end
+
+function NM_SquadSpawned(sgroupid, itemindex, squadID)
+    local abp = nm_blueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
+    if (abp ~= nil ) then
+        Squad_AddAbility(squadID, abp); 
+    end
+end

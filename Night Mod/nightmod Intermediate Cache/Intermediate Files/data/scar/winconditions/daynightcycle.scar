@@ -1,0 +1,310 @@
+-- Import system for handling vanilla units lacking
+-- flares and other night abilities
+import("WinConditions/nightmode_dyn.scar");
+
+----------------------------------------------------
+-------------- Day & Night Cycle -------------------
+--------------- Code by CoDiEx ---------------------
+------------- Modified* by Ragnar ------------------
+----------------------------------------------------
+
+-- DO NOT ENABLE DEV MODE FOR RELEASE BUILD
+Dev_Night_Mode = false;
+
+daynightcycle = {};
+daynightcycle.DAY = 1; -- ENUM for day
+daynightcycle.NIGHT = 2; -- ENUM for night
+daynightcycle.curreantatmos = nil; -- The current atmoshphere file
+daynightcycle.atmospherefolder = "data:art/scenarios/presets/atmosphere/"; -- Folder to load atmospheres from
+daynightcycle.supportedMods = {
+    ["Vanilla"] = { 
+        comp = "78092040bb27420d8edec1072f96db4c:night_mode_compatibility", -- Compatability Entity
+        night = "3690fed557b44fc68b9753c2f52ed775:time_night", -- Night upgrade
+        day = "3690fed557b44fc68b9753c2f52ed775:time_day", -- Day upgrade
+    },
+    ["Final Blow"] = { 
+        comp = "78092040bb27420d8edec1072f96db4c:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:time_day", 
+    },
+    ["All Units"] = { 
+        comp = "c645cab0f7f240599442d19efb9a317c:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:time_day", 
+    },
+    ["WWII Mod"] = { 
+        comp = "992762cc8d9a4c15852dd6ee0e50031f:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:wwii_time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:wwii_time_day", 
+    },
+    ["Imperial Japanese Forces"] = { 
+        comp = "2d123522e8fc4d49b56d4e24b2085c76:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:time_day", 
+    },
+    ["The Advanced Powers"] = { 
+        comp = "cc109ae3d53e479dad997531194c35d5:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:time_day", 
+    },
+    ["Battleground: Europe"] = { 
+        comp = "b546232432f544a9b4a2db493b074721:night_mode_compatibility", 
+        night = "3690fed557b44fc68b9753c2f52ed775:bge_time_night", 
+        day = "3690fed557b44fc68b9753c2f52ed775:bge_time_day", 
+    },
+};
+
+daynightcycle.setup = function()
+    
+    -- Init daynight cycle
+    daynightcycle.init();
+
+    -- Get the active mod
+    daynightcycle.activeMod = daynightcycle.GetActiveMod();
+
+    -- Fetch day/night upgrades
+    daynightcycle.upgrades = {
+        day = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].day),
+        night = BP_GetUpgradeBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].night),
+    };
+    
+    if (Dev_Night_Mode == true) then -- Some dev stuff
+    
+        for i=1, World_GetPlayerCount() do
+            local player = World_GetPlayerAt(i);
+            if (Player_GetRaceName(player) == "west_german") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "german") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "aef") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "british") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            elseif (Player_GetRaceName(player) == "soviet") then
+                Player_AddAbility(player, BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_dev"));
+            end
+        end
+          
+    end
+    
+    -- Create night aura buffer/debuffer
+    Util_CreateEntities( nil, nil, BP_GetEntityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_aura_night_debuff"), World_Pos(0, 0, 0), 1, nil );
+
+end
+
+Scar_AddInit(daynightcycle.setup);
+
+daynightcycle.init = function()
+   
+    daynightcycle.currentseason = {}; -- Seasonal data
+    daynightcycle.updateTime = 7.5 * 60; -- Update time (How often should we cycle between day and night)
+    daynightcycle.transitionTime = 2 * 60; -- The time to transition from one atmosphere to another
+   
+    if (g_isWinterMap == true) then
+   
+        -- Set winter temperatures
+        daynightcycle.currentseason.maxtempature = 0;
+        daynightcycle.currentseason.mintempature = (-45);
+        daynightcycle.currentseason.currenttempature = (-10);
+
+        -- setting chance of weather types
+        daynightcycle.currentseason.chanceofsnow = 0; -- 0 = none \ 100 = big chance
+        daynightcycle.currentseason.chanceofrain = 0; -- 0 = none \ 100 = big chance
+   
+    else
+       
+        -- Set summer temperatures
+        daynightcycle.currentseason.maxtempature = 30;
+        daynightcycle.currentseason.mintempature = 10;
+        daynightcycle.currentseason.currenttempature = 20;
+
+        -- setting chance of weather types
+        daynightcycle.currentseason.chanceofsnow = 0; -- 0 = none \ 100 = big chance
+        daynightcycle.currentseason.chanceofrain = 0; -- 0 = none \ 100 = big chance
+ 
+    end
+       
+    -- setting the Time of day
+    daynightcycle.Time = daynightcycle.NIGHT; -- this is what makes the most sense
+    
+    -- some standard weather things
+    daynightcycle.snowtempature = (-5);
+    
+    -- Create a timer ID
+    daynightcycle.timerID = "__NMTIMER_WEATHER";
+
+    -- Start a timer so the UI can update properly
+    Timer_Start(daynightcycle.timerID, daynightcycle.updateTime);
+    
+    -- Add interval to update time
+    Rule_AddInterval(UpdateDayNightCycle, daynightcycle.updateTime);
+ 
+end
+
+function UpdateDayNightCycle()
+ 
+    Game_LockRandom();
+    local randomint = World_GetRand(0, 100) -- our random thing
+   
+    if (randomint < daynightcycle.currentseason.currenttempature) then
+        daynightcycle.currentseason.currenttempature = daynightcycle.currentseason.currenttempature-1; -- this way we can have the almost same temperature through the game
+        if (daynightcycle.currentseason.chanceofsnow == 0) then -- not winter
+            local DoRain = World_GetRand(0, 100);
+            if (DoRain < daynightcycle.currentseason.chanceofrain) then
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            else
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            end
+        else -- winter
+            if (daynightcycle.currentseason.currenttempature < daynightcycle.snowtempature) then -- we can actually make it snow
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            else
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            end
+        end
+    elseif (randomint > daynightcycle.currentseason.currenttempature) then
+        daynightcycle.currentseason.currenttempature = daynightcycle.currentseason.currenttempature+1; -- this way we can have the almost same temperature through the game
+        if (daynightcycle.currentseason.chanceofsnow == 0) then -- not winter
+            local DoRain = World_GetRand(0, 100);
+            if (DoRain < daynightcycle.currentseason.chanceofrain) then
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            else
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            end
+        else -- winter
+            if (daynightcycle.currentseason.currenttempature < daynightcycle.snowtempature) then -- we can actually make it snow
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            else
+                daynightcycle.curreantatmos = daynightcycle.GetAtmosphere(nil);
+                Game_LoadAtmosphere(daynightcycle.curreantatmos, daynightcycle.transitionTime);
+            end
+        end
+    end
+ 
+    if (daynightcycle.Time == daynightcycle.NIGHT) then
+        daynightcycle.Time = daynightcycle.DAY;
+        Rule_AddOneShot(daynightcycle.SetNight, 30);
+    else
+        daynightcycle.Time = daynightcycle.NIGHT;
+        Rule_AddOneShot(daynightcycle.SetDay, 30);
+    end
+   
+    Game_UnLockRandom();
+   
+end
+ 
+daynightcycle.AtmosphereTable = {}
+daynightcycle.AtmosphereTable.Snow = {}
+daynightcycle.AtmosphereTable.normal = {}
+daynightcycle.AtmosphereTable.rain = {}
+ 
+daynightcycle.AtmosphereTable.Snow.DAY = {
+    "_fe_winter_wreck.aps",
+    "xxxx.aps",
+    "winter_frozenscrum.aps",
+}
+daynightcycle.AtmosphereTable.Snow.NIGHT = {
+    "winter_night_snowy.aps",
+    "tow_cnd_night_01.aps",
+    "dlc/tow_tiger_ace_night.aps",
+}
+daynightcycle.AtmosphereTable.rain.DAY = {
+    "_fe_lake_urban_tanks.aps",
+    "dlc/mp_semois_rainfall.aps",
+    "dlc/tow_heavy_rain_battle.aps",
+}
+daynightcycle.AtmosphereTable.rain.NIGHT = {
+    "cxp1_caen_night_00.aps",
+    "dlc/tow_mudroad311_lightning.aps",
+    "dlc/tow_heavy_rain_battle.aps",
+}
+daynightcycle.AtmosphereTable.normal.DAY = {
+    "_sep.aps",
+    "winter_morning_overcast.aps",
+    "dlc/mp_semois.aps",
+}
+daynightcycle.AtmosphereTable.normal.NIGHT = {
+    "winter_night_clear.aps",
+    "winter_night_clear.aps",
+    "winter_night_clear.aps",
+}
+ 
+daynightcycle.GetAtmosphere = function(weather)
+ 
+    if (weather == "SNOW") then -- its from the snow table we have to take from
+       
+        if (daynightcycle.Time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.Snow.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.Snow.DAY)];
+        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.Snow.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.Snow.NIGHT)];
+        end
+       
+    elseif (weather == "RAIN") then
+       
+        if (daynightcycle.Time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.rain.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.rain.DAY)];
+        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.rain.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.rain.NIGHT)];
+        end
+       
+    elseif (weather == nil) then
+       
+        if (daynightcycle.Time == daynightcycle.DAY) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.normal.DAY[World_GetRand(1, #daynightcycle.AtmosphereTable.normal.DAY)];
+        elseif (daynightcycle.Time == daynightcycle.NIGHT) then
+            return daynightcycle.atmospherefolder ..daynightcycle.AtmosphereTable.normal.NIGHT[World_GetRand(1, #daynightcycle.AtmosphereTable.normal.NIGHT)];
+        end
+       
+    end
+ 
+end
+ 
+daynightcycle.GetCurrentAtmosphere = function()
+    return daynightcycle.curreantatmos;
+end
+ 
+daynightcycle.SetNight = function()
+    for i=1, World_GetPlayerCount() do
+        local player = World_GetPlayerAt(i);
+        
+        Player_RemoveUpgrade(player, daynightcycle.upgrades.day);
+        Cmd_InstantUpgrade(player, daynightcycle.upgrades.night, 1);
+
+    end
+end
+ 
+daynightcycle.SetDay = function()
+    for i=1, World_GetPlayerCount() do
+        local player = World_GetPlayerAt(i);
+
+        Player_RemoveUpgrade(player, daynightcycle.upgrades.day);
+        Cmd_InstantUpgrade(player, daynightcycle.upgrades.night, 1);
+        
+    end
+end
+ 
+daynightcycle.GetTimeOFDay = function()
+    return daynightcycle.Time;
+end
+
+daynightcycle.GetActiveMod = function()
+
+    for i=1, World_GetPlayerCount() do
+        local player = World_GetPlayerAt(i);
+        for k, v in pairs(daynightcycle.supportedMods) do
+            if pcall(BP_GetEntityBlueprint, v.comp) then
+                return k;
+            end
+        end
+    end
+
+    return "Vanilla";
+
+end
