@@ -2,11 +2,11 @@
 Github repository of for the Nightmode "wincondition" pack. Here are all the .scar files as well as the .xml files used to make the custom flare abilities. You can view them to get inspiration for your own implementations.
 
 #### Supported gamemodes:
-> Annihilation with custom popcap
-> Annihilation 2x resources
-> Annihilation 2x resources + zoom
-> Victory Points (Standard)
-> Victory Points 2x resources
+> Annihilation with custom popcap,
+> Annihilation 2x resources,
+> Annihilation 2x resources + zoom,
+> Victory Points (Standard),
+> Victory Points 2x resources, and
 > Victory Points 2x resources + zoom
 
 ## For Modders
