@@ -1,4 +1,4 @@
-<instance description="reveals target area for a period of time&#xA;Multiplayer Clone.&#xD;&#xA;LELIC PLZ." template="abilities">
+<instance description="reveals target area for a period of time&#xA;Multiplayer Clone." template="abilities">
 	<group name="ability_bag">
 		<group name="action_list">
 			<list name="end_self_actions">
@@ -8,45 +8,29 @@
 			<list name="start_self_actions">
 			</list>
 			<list name="start_target_actions">
-				<template_reference name="action" value="action\sequence_action">
-					<uniqueid name="id" value="1073747513" />
-					<list name="action_list_sequences">
-						<list name="actions">
-							<template_reference name="action" value="action\artillery_attack">
-								<bool name="disable_parent_hardpoint" value="True" />
-								<group name="filter_weapons">
-									<instance_reference name="weapon_01" value="" />
-									<instance_reference name="weapon_02" value="" />
-									<instance_reference name="weapon_03" value="" />
-								</group>
-								<float name="num_salvo" value="1" />
-								<float name="use_hardpoint" value="7" />
-								<bool name="face_to_target" value="True" />
-								<uniqueid name="id" value="1073747514" />
-								<bool name="target_override_direction_times_max_range" value="False" />
-							</template_reference>
-						</list>
-						<list name="actions">
-							<template_reference name="action" value="action\spawn_entity">
-								<float name="duration" value="10" />
-								<instance_reference name="entity_blueprint" value="ebps\props\mortar_flare_marker_ability_mp" />
-								<bool name="permanent" value="True" />
-								<bool name="player_owned" value="True" />
-								<group name="target_info">
-									<template_reference name="target_info" value="type_ability_target_type\all">
+				<template_reference name="action" value="action\change_target_action">
+					<list name="actions">
+						<template_reference name="action" value="action\requirement_action">
+							<bool name="check_self" value="False" />
+							<bool name="global_fire_and_forget_on_success" value="False" />
+							<bool name="instant_requirement_check" value="False" />
+							<bool name="kill_action_on_failed_requirements" value="False" />
+							<bool name="no_retrigger" value="False" />
+							<bool name="validate_all_sub_actions" value="True" />
+							<list name="requirement_table">
+								<template_reference name="required" value="requirements\required_unit_type">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<enum name="unit_type" value="team_weapon" />
+									<template_reference name="qualify_option" value="options\none">
 									</template_reference>
-<<<<<<< HEAD:Night Mod/instances/abilities/german/modal_ability/mortar_fire_flares_ability_mp.xml
-								</group>
-								<uniqueid name="id" value="1073747515" />
-								<template_reference name="spawn_attached_option" value="options\none">
-=======
 									<bool name="search_load_out" value="False" />
 									<bool name="owned_by_player_only" value="True" />
 								</template_reference>
 							</list>
 							<list name="action_table">
 								<template_reference name="action" value="action\sequence_action">
-									<uniqueid name="id" value="1073747496" />
+									<uniqueid name="id" value="1073747499" />
 									<list name="action_list_sequences">
 										<list name="actions">
 											<template_reference name="action" value="action\artillery_attack">
@@ -59,7 +43,7 @@
 												<float name="num_salvo" value="1" />
 												<float name="use_hardpoint" value="4" />
 												<bool name="face_to_target" value="True" />
-												<uniqueid name="id" value="1073747503" />
+												<uniqueid name="id" value="1073747500" />
 												<bool name="target_override_direction_times_max_range" value="False" />
 											</template_reference>
 										</list>
@@ -73,7 +57,7 @@
 													<template_reference name="target_info" value="type_ability_target_type\all">
 													</template_reference>
 												</group>
-												<uniqueid name="id" value="1073747504" />
+												<uniqueid name="id" value="1073747501" />
 												<template_reference name="spawn_attached_option" value="options\none">
 												</template_reference>
 												<list name="spawned_entity_actions">
@@ -87,19 +71,31 @@
 										</list>
 									</list>
 									<bool name="run_now" value="True" />
->>>>>>> 4d744995e439d04faa1778b9129dead2a16629f1:Night Mod/instances/abilities/soviet/modal_ability/mortar_fire_flares_ability_mp_nmtest.xml
 								</template_reference>
-								<list name="spawned_entity_actions">
-								</list>
-								<group name="offset">
-									<float name="x" value="0" />
-									<float name="y" value="0" />
-									<float name="z" value="0" />
-								</group>
+								<template_reference name="action" value="action\add_aura">
+									<instance_reference name="aura" value="aura\global\light_remove_debuff" mod="3690fed557b44fc68b9753c2f52ed775" />
+									<group name="area_info">
+										<float name="angle_left" value="0" />
+										<float name="angle_right" value="0" />
+										<enum name="area_type" value="circle" />
+										<float name="radius" value="35" />
+									</group>
+									<template_reference name="target_info" value="type_ability_target_type\all">
+									</template_reference>
+									<bool name="permanent" value="True" />
+									<uniqueid name="id" value="1073747502" />
+								</template_reference>
+							</list>
+							<uniqueid name="id" value="1073747498" />
+							<bool name="fire_and_forget_non_global" value="False" />
+							<template_reference name="ui_help_text" value="tables\help_text_phrase">
+								<int name="phrase_order" value="0" />
+								<locstring name="phrase" value="0" />
 							</template_reference>
-						</list>
+						</template_reference>
 					</list>
-					<bool name="run_now" value="True" />
+					<enum name="change_target_type" value="entities" />
+					<uniqueid name="id" value="1073747497" />
 				</template_reference>
 			</list>
 		</group>
@@ -153,7 +149,7 @@
 			<string name="code_2" value="" />
 			<string name="code_3" value="" />
 		</group>
-		<enum name="squad_caster" value="one_entity" />
+		<enum name="squad_caster" value="squad" />
 		<enum name="target" value="tp_position" />
 		<group name="target_special_validation">
 			<template_reference name="target_special_validation" value="type_ability_target_type\all">
@@ -205,6 +201,36 @@
 					</template_reference>
 				</list>
 			</template_reference>
+			<template_reference name="required" value="requirements\required_any_in_list">
+				<enum name="reason" value="usage" />
+				<locstring name="ui_name" value="45" mod="3690fed557b44fc68b9753c2f52ed775" />
+				<list name="requirements">
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\au_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\wwii_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+				</list>
+			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_none" />
 		<int name="ui_position" value="34" />
@@ -239,5 +265,5 @@
 		<bool name="can_cast_outside_active_battle_field" value="False" />
 		<bool name="ability_super_event_cue" value="False" />
 	</group>
-	<uniqueid name="pbgid" value="1073741840" />
+	<uniqueid name="pbgid" value="1073741839" />
 </instance>
