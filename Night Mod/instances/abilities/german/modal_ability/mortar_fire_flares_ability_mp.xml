@@ -29,7 +29,11 @@
 						<list name="actions">
 							<template_reference name="action" value="action\spawn_entity">
 								<float name="duration" value="10" />
+<<<<<<< HEAD
 								<instance_reference name="entity_blueprint" value="ebps\props\mortar_flare_marker_ability_np" mod="3690fed557b44fc68b9753c2f52ed775" />
+=======
+								<instance_reference name="entity_blueprint" value="ebps\props\mortar_flare_marker_ability_nm" mod="3690fed557b44fc68b9753c2f52ed775" />
+>>>>>>> 2d2eeac5d10c9f4481221fd75b1ba99a444275f8
 								<bool name="permanent" value="True" />
 								<bool name="player_owned" value="True" />
 								<group name="target_info">
@@ -63,7 +67,7 @@
 			<float name="command" value="0" />
 			<float name="fuel" value="0" />
 			<float name="manpower" value="0" />
-			<float name="munition" value="30" />
+			<float name="munition" value="0" />
 			<float name="popcap" value="0" />
 		</group>
 		<string name="cursor_ghost_blueprint" value="" />
@@ -94,12 +98,12 @@
 		<enum name="shared_timer" value="squad_ability_1" />
 		<bool name="shared_timer_player_wide" value="False" />
 		<group name="speech_code_2">
-			<string name="code_1" value="fl" />
+			<string name="code_1" value="" />
 			<string name="code_2" value="" />
 			<string name="code_3" value="" />
 		</group>
 		<group name="speech_code_3">
-			<string name="code_1" value="flr" />
+			<string name="code_1" value="" />
 			<string name="code_2" value="" />
 			<string name="code_3" value="" />
 		</group>
@@ -112,8 +116,8 @@
 		<float name="toggled_recharge_time_off" value="0" />
 		<float name="toggled_recharge_time_on" value="0" />
 		<group name="ui_cursor">
-			<string name="cursor_bad" value="modal_ability_cancel" />
-			<string name="cursor_good" value="modal_attack" />
+			<string name="cursor_bad" value="" />
+			<string name="cursor_good" value="" />
 			<string name="cursor_nonmodal_good" value="" />
 		</group>
 		<group name="ui_info">
@@ -155,9 +159,39 @@
 					</template_reference>
 				</list>
 			</template_reference>
+			<template_reference name="required" value="requirements\required_any_in_list">
+				<enum name="reason" value="usage" />
+				<locstring name="ui_name" value="45" mod="3690fed557b44fc68b9753c2f52ed775" />
+				<list name="requirements">
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\au_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+					<template_reference name="requirement" value="requirements\required_player_upgrade">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<float name="max_completed" value="100" />
+						<float name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\global\mod_support\wwii_time_night" mod="3690fed557b44fc68b9753c2f52ed775" />
+					</template_reference>
+				</list>
+			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_none" />
-		<int name="ui_position" value="34" />
+		<int name="ui_position" value="33" />
 		<bool name="ui_mini_map_capture" value="False" />
 		<bool name="facing_ignore_during_active" value="False" />
 		<instance_reference name="ui_range" value="ui_reticule\ability_range_artillery_barrage" />

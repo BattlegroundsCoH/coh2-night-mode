@@ -9,7 +9,7 @@ import("WinConditions/nightmode_dyn.scar");
 ----------------------------------------------------
 
 -- DO NOT ENABLE DEV MODE FOR RELEASE BUILD
-Dev_Night_Mode = false;
+Dev_Night_Mode = true;
 
 daynightcycle = {};
 daynightcycle.DAY = 1; -- ENUM for day
@@ -61,7 +61,11 @@ daynightcycle.init = function()
     
     -- Setup seasonal data
     daynightcycle.currentseason = {}; -- Seasonal data
+<<<<<<< HEAD
     daynightcycle.updateTime = 4.5 * 60; -- Update time (How often should we cycle between day and night)
+=======
+    daynightcycle.updateTime = 1 * 60; -- Update time (How often should we cycle between day and night)
+>>>>>>> 2d2eeac5d10c9f4481221fd75b1ba99a444275f8
     daynightcycle.transitionTime = 2 * 60; -- The time to transition from one atmosphere to another
    
     -- Are we playing on a winter map (Equal to calling World_IsWinterMap)
