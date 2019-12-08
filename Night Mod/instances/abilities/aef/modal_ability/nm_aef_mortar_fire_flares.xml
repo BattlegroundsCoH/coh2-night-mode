@@ -51,7 +51,7 @@
 						<list name="actions">
 							<template_reference name="action" value="action\spawn_entity">
 								<float name="duration" value="33" />
-								<instance_reference name="entity_blueprint" value="ebps\auras\nm_aura_flare" mod="3690fed557b44fc68b9753c2f52ed775" />
+								<instance_reference name="entity_blueprint" value="ebps\auras\aura_flare" mod="3690fed557b44fc68b9753c2f52ed775" />
 								<bool name="permanent" value="False" />
 								<bool name="player_owned" value="False" />
 								<group name="target_info">

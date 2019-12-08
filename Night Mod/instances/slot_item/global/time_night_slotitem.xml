@@ -236,27 +236,6 @@
 							</template_reference>
 						</list>
 					</template_reference>
-					<template_reference name="required" value="requirements\required_not">
-						<enum name="reason" value="usage" />
-						<locstring name="ui_name" value="0" />
-						<list name="requirement_table">
-							<template_reference name="required" value="requirements\required_any_in_list">
-								<enum name="reason" value="usage" />
-								<locstring name="ui_name" value="0" />
-								<list name="requirements">
-									<template_reference name="requirement" value="requirements\required_slot_item">
-										<enum name="reason" value="usage" />
-										<locstring name="ui_name" value="0" />
-										<bool name="check_item_on_entity" value="False" />
-										<bool name="display_requirement" value="True" />
-										<float name="max_owned" value="10" />
-										<float name="min_owned" value="1" />
-										<instance_reference name="slot_item" value="slot_item\global\time_night_slotitem" mod="3690fed557b44fc68b9753c2f52ed775" />
-									</template_reference>
-								</list>
-							</template_reference>
-						</list>
-					</template_reference>
 				</list>
 				<list name="action_table">
 					<template_reference name="action" value="action\ui_unit_modifier_action">
@@ -340,27 +319,6 @@
 								</template_reference>
 								<bool name="search_load_out" value="False" />
 								<bool name="owned_by_player_only" value="True" />
-							</template_reference>
-						</list>
-					</template_reference>
-					<template_reference name="required" value="requirements\required_not">
-						<enum name="reason" value="usage" />
-						<locstring name="ui_name" value="0" />
-						<list name="requirement_table">
-							<template_reference name="required" value="requirements\required_any_in_list">
-								<enum name="reason" value="usage" />
-								<locstring name="ui_name" value="0" />
-								<list name="requirements">
-									<template_reference name="requirement" value="requirements\required_slot_item">
-										<enum name="reason" value="usage" />
-										<locstring name="ui_name" value="0" />
-										<bool name="check_item_on_entity" value="False" />
-										<bool name="display_requirement" value="True" />
-										<float name="max_owned" value="10" />
-										<float name="min_owned" value="1" />
-										<instance_reference name="slot_item" value="slot_item\global\time_night_slotitem" mod="3690fed557b44fc68b9753c2f52ed775" />
-									</template_reference>
-								</list>
 							</template_reference>
 						</list>
 					</template_reference>
