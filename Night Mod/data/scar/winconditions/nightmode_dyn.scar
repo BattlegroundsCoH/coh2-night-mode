@@ -15,6 +15,10 @@ function NM_HookNightMode()
         ["riflemen_squad_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
         ["riflemen_squad_veteran_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
         ["sniper_team_mp"] = { org = BP_GetAbilityBlueprint("sniper_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_sniper_fire_flares") };
+        ["assault_pioneer_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["jaeger_light_infantry_recon_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["obersoldaten_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["volksgrenadier_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
     };
     
     -- Players to keep track of
