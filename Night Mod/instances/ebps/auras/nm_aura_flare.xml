@@ -206,20 +206,20 @@
 		<template_reference name="exts" value="ebpextensions\action_apply_ext">
 			<list name="actions">
 				<template_reference name="action" value="action\add_aura">
-					<instance_reference name="aura" value="aura\global\night_debuff" mod="3690fed557b44fc68b9753c2f52ed775" />
+					<instance_reference name="aura" value="aura\global\night_debuff_remove" mod="3690fed557b44fc68b9753c2f52ed775" />
 					<group name="area_info">
 						<float name="angle_left" value="0" />
 						<float name="angle_right" value="0" />
 						<enum name="area_type" value="circle" />
-						<float name="radius" value="3.402823E+38" />
+						<float name="radius" value="35" />
 					</group>
 					<template_reference name="target_info" value="type_ability_target_type\all">
 					</template_reference>
 					<bool name="permanent" value="False" />
-					<uniqueid name="id" value="1073747435" />
+					<uniqueid name="id" value="1073747669" />
 				</template_reference>
 			</list>
 		</template_reference>
 	</list>
-	<uniqueid name="pbgid" value="1073741826" />
+	<uniqueid name="pbgid" value="1073741835" />
 </instance>
