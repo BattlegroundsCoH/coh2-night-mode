@@ -1,0 +1,269 @@
+<instance description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext">
+			<string name="alternate_sua" value="" />
+			<bool name="always_revealed_in_fow" value="False" />
+			<file name="animator" value="armies\soviet\projectiles\phosphorus_flare\phosphorus_flare" />
+			<bool name="is_visible_in_game" value="True" />
+			<float name="precise_size" value="-1" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sim_entity_ext">
+			<bool name="is_in_spatial_bucket" value="False" />
+			<float name="rotate_snap" value="90" />
+			<float name="transferable" value="0" />
+			<bool name="kill_paradrop" value="False" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\explosion_ext">
+			<float name="explosion_time" value="0" />
+			<group name="terrain_hit">
+				<float name="chance_splat_only" value="0" />
+				<enum name="cover_type" value="tp_light" />
+				<group name="deformation">
+					<string name="deform_decal_file" value="offmap_artillery_crater" />
+					<bool name="limited" value="True" />
+					<bool name="random_rotation" value="True" />
+					<float name="rotation" value="360" />
+					<group name="splat_list">
+						<group name="entry_01">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\cement" />
+						</group>
+						<group name="entry_02">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\crater_concrete" />
+						</group>
+						<group name="entry_03">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\crater_stone" />
+						</group>
+						<group name="entry_04">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\road_asphalt" />
+						</group>
+						<group name="entry_05">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\rubble" />
+						</group>
+						<group name="entry_06">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\sand" />
+						</group>
+						<group name="entry_07">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\stone_road" />
+						</group>
+						<group name="entry_08">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\urban" />
+						</group>
+						<group name="entry_09">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\urban_narrow" />
+						</group>
+						<group name="entry_10">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="material\shingle_sp_m01" />
+						</group>
+						<group name="entry_11">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+						<group name="entry_12">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+						<group name="entry_13">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+						<group name="entry_14">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+						<group name="entry_15">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+						<group name="entry_default">
+							<string name="splat_texture" value="" />
+							<instance_reference name="terrain_material" value="" />
+						</group>
+					</group>
+					<float name="vertical_scale" value="0.0035" />
+					<enum name="deform_type" value="tp_additive" />
+				</group>
+				<float name="radius_max" value="8" />
+				<float name="radius_min" value="5" />
+				<float name="splat_only_splat_seconds" value="90" />
+				<group name="splat_only_splats">
+					<group name="entry_01">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\cement" />
+					</group>
+					<group name="entry_02">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\crater_concrete" />
+					</group>
+					<group name="entry_03">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\crater_stone" />
+					</group>
+					<group name="entry_04">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\road_asphalt" />
+					</group>
+					<group name="entry_05">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\rubble" />
+					</group>
+					<group name="entry_06">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\sand" />
+					</group>
+					<group name="entry_07">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\stone_road" />
+					</group>
+					<group name="entry_08">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\urban" />
+					</group>
+					<group name="entry_09">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="material\urban_narrow" />
+					</group>
+					<group name="entry_10">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_11">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_12">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_13">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_14">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_15">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+					<group name="entry_default">
+						<string name="splat_texture" value="" />
+						<instance_reference name="terrain_material" value="" />
+					</group>
+				</group>
+			</group>
+			<list name="on_detonate_actions">
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\projectile_ext">
+			<float name="acceleration" value="60" />
+			<group name="artillery">
+				<bool name="can_counter_barrage" value="True" />
+				<bool name="is_artillery" value="True" />
+				<bool name="is_target_only" value="False" />
+				<float name="speed_distance_multiplier" value="0.2" />
+				<float name="speed_increment" value="0.5" />
+				<enum name="firing_angle_type" value="low_angle" />
+				<bool name="use_homing_when_no_blocker" value="True" />
+				<float name="non_collide_start_angle" value="10" />
+				<float name="non_collide_end_angle" value="89" />
+			</group>
+			<float name="building_hit_fx_delay" value="0" />
+			<bool name="collision_building_wall_panel_ignore" value="False" />
+			<group name="collision_type">
+				<template_reference name="collision_type" value="type_projectile_collision\tp_artillery">
+				</template_reference>
+			</group>
+			<float name="deathtimer" value="2" />
+			<float name="delay_detonate_time" value="0" />
+			<bool name="delay_detonate_ui_enabled" value="False" />
+			<string name="launcher_marker" value="Marker_Tank_Barrel_End" />
+			<float name="life_time_while_alive" value="0" />
+			<float name="rotation_speed" value="10000" />
+			<bool name="spawn_collision_fx" value="True" />
+			<float name="speed" value="20" />
+			<bool name="collision_land_ignore" value="False" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\paradrop_ext">
+			<float name="decoy_priority_increase" value="0" />
+			<float name="drop_speed" value="0.5" />
+			<float name="land_seconds" value="4" />
+			<bool name="make_dead_on_drop" value="False" />
+			<bool name="reserve_sparse_grid_entry" value="False" />
+			<list name="ground_actions">
+				<template_reference name="action" value="action\delay">
+					<float name="delay" value="4" />
+					<float name="delay_min" value="0" />
+					<bool name="progress_bar" value="False" />
+					<bool name="randomize" value="False" />
+					<list name="delayed_actions">
+						<template_reference name="action" value="action\make_dead">
+							<enum name="death_intensity" value="death_intensity_low" />
+							<bool name="ignore_invulnerability" value="False" />
+							<bool name="destroy" value="True" />
+							<list name="death_reaction_table">
+								<group name="death_reaction">
+									<enum name="death_reaction" value="normal" />
+									<float name="weight" value="1" />
+								</group>
+							</list>
+							<uniqueid name="id" value="1073747537" />
+						</template_reference>
+					</list>
+					<uniqueid name="id" value="1073747538" />
+					<bool name="can_prevent_refund" value="True" />
+				</template_reference>
+			</list>
+			<float name="sight_start_height" value="-1" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext">
+			<list name="actions">
+				<template_reference name="action" value="action\add_aura">
+					<instance_reference name="aura" value="aura\global\light_remove_debuff" mod="3690fed557b44fc68b9753c2f52ed775" />
+					<group name="area_info">
+						<float name="angle_left" value="0" />
+						<float name="angle_right" value="0" />
+						<enum name="area_type" value="circle" />
+						<float name="radius" value="70" />
+					</group>
+					<template_reference name="target_info" value="type_ability_target_type\all">
+					</template_reference>
+					<bool name="permanent" value="False" />
+					<uniqueid name="id" value="1073747539" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sight_ext">
+			<group name="detect_camouflage">
+				<float name="tp_global" value="0" />
+				<float name="tp_mine" value="0" />
+			</group>
+			<bool name="extended_sight" value="False" />
+			<float name="extended_sight_radius" value="70" />
+			<group name="extended_sight_target_info">
+				<template_reference name="extended_sight_target_info" value="type_ability_target_type\all">
+				</template_reference>
+			</group>
+			<float name="reveal_area_on_death_time" value="1.5" />
+			<group name="sight_package">
+				<float name="inner_height" value="40" />
+				<float name="inner_radius" value="10" />
+				<float name="outer_height" value="10" />
+				<float name="outer_radius" value="30" />
+				<float name="cone_angle" value="360" />
+				<float name="cone_start_radius" value="0" />
+			</group>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="1073741830" />
+</instance>

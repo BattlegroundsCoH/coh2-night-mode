@@ -55,11 +55,11 @@
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\daynightcycle.scar</FileName>
-			<FileHash>59983487f6167060a6b5bc38ceba23fc</FileHash>
+			<FileHash>3f7130b790f9acaf94ee25d7450c3b41</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\nightmode_dyn.scar</FileName>
-			<FileHash>63061996615c10c761a079f80139708c</FileHash>
+			<FileHash>0c06bd8e37c277ba0978379fe59071c3</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints.scar</FileName>
@@ -99,11 +99,15 @@
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\locale\english\english.ucs</FileName>
-			<FileHash>99763e4e6893b0af54177447e5f74fe8</FileHash>
+			<FileHash>ba1dd38968fddc30bb16191a1e5428d9</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\nightmodattrib.xml</FileName>
 			<FileHash>cbc9622662c247e8fc4f3d9925288c8a</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\glo_mortar_flares_ability.xml</FileName>
+			<FileHash>ef66ba9a9970d0d33a4542e7443c60bf</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\nm_dev.xml</FileName>
@@ -111,15 +115,27 @@
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\german\modal_ability\mortar_fire_flares_ability_mp.xml</FileName>
-			<FileHash>352ef4883816d669ac56d1ba8702228f</FileHash>
+			<FileHash>8458afa059c63fd14441af4baf6bf2d7</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\mortar_fire_flares_ability_120mm_nm.xml</FileName>
+			<FileHash>51998d272ed343d9545ff1966f0a6d81</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\mortar_fire_flares_ability_nm.xml</FileName>
+			<FileHash>3457231a1b9c44cd1d954aa4aa61cc85</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\light_remove_debuff.xml</FileName>
-			<FileHash>8ef52e289ee2811b72fcb84c88700beb</FileHash>
+			<FileHash>1366a62aca96c0829eecfdd209d1e10d</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\night_debuff.xml</FileName>
 			<FileHash>f5f3ed8f5334a8b51550a1fe1d08113a</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\night_mortar_flare.xml</FileName>
+			<FileHash>68439e5c2c663aae39376933dcc8a729</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\mod_support\bge_night_debuff.xml</FileName>
@@ -150,12 +166,36 @@
 			<FileHash>4e5e1f1c2245ee88b331b7dcdf3eafd5</FileHash>
 		</BurnInfo>
 		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\projectile\airdrop_flare_nm.xml</FileName>
+			<FileHash>ab172f4d958680c6fd07beb01d3f9235</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\props\mortar_flare_marker_ability_np.xml</FileName>
+			<FileHash>9476960f6b41a7f88420a1dc54933648</FileHash>
+		</BurnInfo>
+		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\german\team_weapons\granatewerfer_34_81mm_mortar_mp.xml</FileName>
 			<FileHash>02a015fa8fd139c87269a9edd5b8a74a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\hm-120_38_mortar_nm.xml</FileName>
+			<FileHash>28f0192d2f696f98f0c614b5cf9c1aab</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\pm41_82mm_mortar_nm.xml</FileName>
+			<FileHash>3ef24ec2d91c036e5b2856c381a2ff40</FileHash>
+		</BurnInfo>
+		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\german\soldiers\mortar_team\mortar_team_81mm_nm.xml</FileName>
-			<FileHash>99aadf55f4fc02e2da07c5545cd0ffbf</FileHash>
+			<FileHash>5fc4be0cc055cd68f5da205e840cc02a</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\hm-120_38_mortar_squad_nm.xml</FileName>
+			<FileHash>d950839730dcddd9b0358f88b94b28a9</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\pm-82_41_mortar_squad_nm.xml</FileName>
+			<FileHash>0fff6c5a7047635766ae9b36f2add02d</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\slot_item\global\time_night_debuff_slotitem.xml</FileName>
@@ -170,16 +210,16 @@
 			<FileHash>1eca561d7a210ca4f300bb73cb190196</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night_debuff_infantry.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night_debuff_infantry_old.xml</FileName>
 			<FileHash>4180d8772ddf4893f69d105383964848</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night_debuff_vehicle.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night_debuff_vehicle_old.xml</FileName>
 			<FileHash>e44b0b85e30b64e9949648213451da88</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night_old.xml</FileName>
-			<FileHash>ef984465eebb788e09cc7d40ccde63c0</FileHash>
+			<FileHash>5b2ea3b9b10b57f5032a389b887a3e9c</FileHash>
 		</BurnInfo>
 		<BurnInfo>
 			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\mod_support\au_time_day.xml</FileName>

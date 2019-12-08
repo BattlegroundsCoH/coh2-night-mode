@@ -48,10 +48,14 @@ TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 	FileSettingsStart defverification="sha1_blocks" defcompression="stream_compress"
 		Override wildcard=".*\.(rgd)$" minsize="-1" maxsize="-1" vt="sha1_blocks" ct="buffer_compress"
 	FileSettingsEnd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\glo_mortar_flares_ability.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\german\modal_ability\mortar_fire_flares_ability_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\mortar_fire_flares_ability_120mm_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\mortar_fire_flares_ability_nm.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\light_remove_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_mortar_flare.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\bge_night_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\mod_support\wwii_night_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\critical\vehicles\lights_damaged.rgd
@@ -59,13 +63,19 @@ TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_mortars.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\nm_aura_night_debuff.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\gameplay\buildable_campfire_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\projectile\airdrop_flare_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\props\mortar_flare_marker_ability_np.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\german\team_weapons\granatewerfer_34_81mm_mortar_mp.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\hm-120_38_mortar_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\pm41_82mm_mortar_nm.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\german\soldiers\mortar_team\mortar_team_81mm_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\hm-120_38_mortar_squad_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\pm-82_41_mortar_squad_nm.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_debuff_slotitem.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd
-	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_infantry.rgd
-	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_vehicle.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_infantry_old.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_debuff_vehicle_old.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night_old.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_day.rgd
 	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\mod_support\au_time_night.rgd
