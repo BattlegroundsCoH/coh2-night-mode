@@ -9,7 +9,7 @@
 			</list>
 			<list name="start_target_actions">
 				<template_reference name="action" value="action\sequence_action">
-					<uniqueid name="id" value="1073747636" />
+					<uniqueid name="id" value="1073747749" />
 					<list name="action_list_sequences">
 						<list name="actions">
 							<template_reference name="action" value="action\artillery_attack">
@@ -20,9 +20,9 @@
 									<instance_reference name="weapon_03" value="" />
 								</group>
 								<float name="num_salvo" value="1" />
-								<float name="use_hardpoint" value="7" />
+								<float name="use_hardpoint" value="4" />
 								<bool name="face_to_target" value="True" />
-								<uniqueid name="id" value="1073747637" />
+								<uniqueid name="id" value="1073747750" />
 								<bool name="target_override_direction_times_max_range" value="False" />
 							</template_reference>
 						</list>
@@ -36,7 +36,7 @@
 									<template_reference name="target_info" value="type_ability_target_type\all">
 									</template_reference>
 								</group>
-								<uniqueid name="id" value="1073747638" />
+								<uniqueid name="id" value="1073747751" />
 								<template_reference name="spawn_attached_option" value="options\none">
 								</template_reference>
 								<list name="spawned_entity_actions">
@@ -58,7 +58,7 @@
 									<template_reference name="target_info" value="type_ability_target_type\all">
 									</template_reference>
 								</group>
-								<uniqueid name="id" value="1073747671" />
+								<uniqueid name="id" value="1073747752" />
 								<template_reference name="spawn_attached_option" value="options\none">
 								</template_reference>
 								<list name="spawned_entity_actions">
@@ -187,7 +187,7 @@
 			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_none" />
-		<int name="ui_position" value="33" />
+		<int name="ui_position" value="34" />
 		<bool name="ui_mini_map_capture" value="False" />
 		<bool name="facing_ignore_during_active" value="False" />
 		<instance_reference name="ui_range" value="ui_reticule\ability_range_artillery_barrage" />
@@ -219,5 +219,5 @@
 		<bool name="can_cast_outside_active_battle_field" value="False" />
 		<bool name="ability_super_event_cue" value="False" />
 	</group>
-	<uniqueid name="pbgid" value="1073741843" />
+	<uniqueid name="pbgid" value="1073741844" />
 </instance>
