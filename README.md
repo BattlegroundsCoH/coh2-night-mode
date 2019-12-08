@@ -11,7 +11,6 @@ Github repository for the Night Mode "wincondition" pack. Here are all the .scar
 
 ## For Modders
 Wish to make your tuning mod compatible with the night mode mod?
-If so, you can contact @RagnarTheEverchosen or @JustCodiex. At the moment, all we need is your mod's GUID.
 
 The first thing we need to do is to create two new upgrades called `time_day` and `time_night` and set the `owner_type` to `player`.
 
