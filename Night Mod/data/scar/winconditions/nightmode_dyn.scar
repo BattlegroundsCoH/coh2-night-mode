@@ -36,14 +36,20 @@ function NM_HookNightMode()
 end
 
 function NM_HookPlayer(player)
+    
     local pid = Player_GetID(player);
+
     nm_players[pid] = {
         nm_player = player,
         player_group = SGroup_CreateIfNotFound("nm_p" ..pid),
     };
+    
+    Rule_AddPlayerEvent(NM_CommandAbility, player, GE_AbilityExecuted);
+
     if not Rule_Exists(NM_CheckPlayers) then
-        Rule_AddInterval(NM_CheckPlayers, 0.15);
+        Rule_AddInterval(NM_CheckPlayers, 0.10);
     end
+
 end
 
 function NM_CheckPlayers()
@@ -87,4 +93,11 @@ end
 
 function NM_ReplaceAbility(squadID, abp)
     Squad_AddAbility(squadID, abp); 
+end
+
+-- Player_StopAbility( ModPlayer* player, ScarAbilityPBG ability, bool bEarlyExit ) 
+-- 
+
+function NM_CommandAbility(...)
+    Util_MissionTitle("Called ability .." #arg, 5,5,5);
 end
