@@ -10,68 +10,77 @@ TOCStart name="data" alias="data" path="" relativeroot="data"
 		Override wildcard=".*\.(smf)$" minsize="-1" maxsize="-1" vt="none" ct="store"
 		Override wildcard=".*\.(bsc)$" minsize="-1" maxsize="-1" vt="none" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_2x_res.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom_2x_res.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_2x_res.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom_2x_res.win
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_2x_res.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom_2x_res.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\commandertables.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\daynightcycle.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\nightmode_dyn.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_2x_res.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom_2x_res.scar
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Assets\Textures\3690fed557b44fc68b9753c2f52ed775_I3.dds
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Bin\3690fed557b44fc68b9753c2f52ed775.gfx
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\annihilation_zoom_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\game\winconditions\victorypoints_zoom_2x_res.win
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\annihilation_zoom_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\commandertables.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\daynightcycle.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\nightmode_dyn.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\scar\winconditions\victorypoints_zoom_2x_res.scar
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Assets\Textures\3690fed557b44fc68b9753c2f52ed775_I3.dds
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\data\ui\Bin\3690fed557b44fc68b9753c2f52ed775.gfx
 TOCEnd
 TOCStart name="info" alias="info" path="" relativeroot="info"
 	FileSettingsStart defverification="crc_blocks" defcompression="stream_compress"
 		Override wildcard=".*\.(lua)$" minsize="-1" maxsize="-1" vt="crc_blocks" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\icon.tga
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\icon.tga
 TOCEnd
 TOCStart name="locale" alias="locale" path="" relativeroot="locale"
 	FileSettingsStart defverification="crc_blocks" defcompression="stream_compress"
 	FileSettingsEnd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\locale\english\english.ucs
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\locale\english\english.ucs
 TOCEnd
 TOCStart name="attrib" alias="attrib" path="" relativeroot="attrib"
 	FileSettingsStart defverification="sha1_blocks" defcompression="stream_compress"
 		Override wildcard=".*\.(rgd)$" minsize="-1" maxsize="-1" vt="sha1_blocks" ct="buffer_compress"
 	FileSettingsEnd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\aef\modal_ability\nm_aef_mortar_fire_flares.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\aef\modal_ability\nm_riflemen_fire_flare.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\german\modal_ability\nm_ger_mortar_fire_flares.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sniper_fire_flares.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_01.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_02.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\west_german\modal_ability\commander_ability\nm_flare_artillery.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff_remove.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_flare_mortar.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_flare_riflemen.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_night_debuff.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\props\nm_mortar_flare.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\aef\team_weapons\nm_m1_81mm_mortar.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\german\team_weapons\nm_granatewerfer_34_81mm_mortar.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\nm_hm-120_38_mortar.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\nm_pm41_82mm_mortar.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\aef\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_squad.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\british\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_british_squad.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\german\soldiers\mortar_team\nm_mortar_team_81mm.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\nm_hm-120_38_mortar_squad.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\nm_pm-82_41_mortar_squad.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_slotitem.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
-	D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\nm_dev.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\aef\modal_ability\nm_aef_mortar_fire_flares.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\aef\modal_ability\nm_riflemen_fire_flares.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\british\modal_ability\commander_ability\nm_early_warning.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\british\modal_ability\commander_ability\nm_mortar_artillery.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\german\modal_ability\nm_ger_mortar_fire_flares.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sniper_fire_flares.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_01.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_02.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\west_german\modal_ability\nm_flare_trap_capture_point.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\abilities\west_german\modal_ability\commander_ability\nm_flare_artillery.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\aura\global\night_debuff_remove.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_flare_mortar.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_flare_riflemen.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\auras\aura_night_debuff.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\props\nm_flare_booby_trap.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\props\nm_mortar_flare.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\aef\team_weapons\nm_m1_81mm_mortar.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\aef\vehicles\m3_halftrack\m21_mortar_halftrack_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\german\team_weapons\nm_granatewerfer_34_81mm_mortar.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\german\vehicles\light_halftrack_250\mortar_light_halftrack_250_7_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\nm_hm-120_38_mortar.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\ebps\races\soviet\team_weapons\nm_pm41_82mm_mortar.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\aef\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_squad.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\aef\vehicles\m3_halftrack_squad\m21_mortar_halftrack_squad_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\british\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_british_squad.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\german\soldiers\mortar_team\nm_mortar_team_81mm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\german\vehicles\halftrack_squad\mortar_250_halftrack_squad_nm.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\nm_hm-120_38_mortar_squad.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\sbps\races\soviet\soldiers\mortar_squad\nm_pm-82_41_mortar_squad.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\slot_item\global\time_night_slotitem.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\hide_ability.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_day.rgd
+	E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\attrib\attrib\upgrade\global\time_night.rgd
 TOCEnd

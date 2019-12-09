@@ -5,18 +5,30 @@ function NM_HookNightMode()
     -- list of squad blueprints to add new flare ability to
     nm_squadblueprintlist = {
         ["mortar_team_81mm_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_mortar_team_81mm"),
+        ["mortar_250_halftrack_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:mortar_250_halftrack_squad_nm"), -- German Mortar Halftrack
         ["m1_81mm_mortar_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_m1_81mm_mortar_squad"),
         ["hm-120_38_mortar_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_hm-120_38_mortar_squad"),
         ["pm-82_41_mortar_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_pm-82_41_mortar_squad"),
         ["m1_81mm_mortar_british_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_m1_81mm_mortar_british_squad"),
+        ["m21_mortar_halftrack_squad_mp"] = BP_GetSquadBlueprint("3690fed557b44fc68b9753c2f52ed775:m21_mortar_halftrack_squad_nm"), -- USF Mortar Halftrack
     };
 
+    -- List of squad blueprints to replace abilities for
     nm_abilityblueprintlist = {
         ["riflemen_squad_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
         ["riflemen_squad_veteran_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
         ["sniper_team_mp"] = { org = BP_GetAbilityBlueprint("sniper_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_sniper_fire_flares") };
+        ["assault_pioneer_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["jaeger_light_infantry_recon_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["obersoldaten_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["volksgrenadier_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
     };
     
+    -- List of command abilities to replace (All custom abilities must require the hide_ability player upgrade so they dont show in the UI)
+    nm_commandabilitylist = {
+        ["flare_artillery"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_artillery"),
+    };
+
     -- Players to keep track of
     nm_players = {};
 
@@ -39,14 +51,20 @@ function NM_HookNightMode()
 end
 
 function NM_HookPlayer(player)
+    
     local pid = Player_GetID(player);
+
     nm_players[pid] = {
         nm_player = player,
         player_group = SGroup_CreateIfNotFound("nm_p" ..pid),
     };
+    
+    Rule_AddPlayerEvent(NM_CommandAbility, player, GE_AbilityExecuted);
+
     if not Rule_Exists(NM_CheckPlayers) then
-        Rule_AddInterval(NM_CheckPlayers, 0.15);
+        Rule_AddInterval(NM_CheckPlayers, 0.10);
     end
+
 end
 
 function NM_CheckPlayers()
@@ -74,20 +92,65 @@ end
 
 function NM_ReplaceSquad(squadID, sbp)
 
+    -- Get position of squad
     local pos = Squad_GetPosition(squadID);
     local posTarget = pos;
     
+    -- If squad has a destination, save it (eg. called in from off-map)
     if (Squad_HasDestination(squadID)) then
         posTarget = Squad_GetDestination(squadID);
     end
 
+    -- Get player owner
     local player = Squad_GetPlayerOwner(squadID);
 
+    -- Destroy the squad
     Squad_Destroy(squadID);
-    Squad_CreateAndSpawnToward( sbp, player, 0, pos, posTarget );
+
+    -- Create and spawn replacement squad and get a temp SGroup
+    local squad = Squad_CreateAndSpawnToward( sbp, player, 0, pos, posTarget );
+    local sg_temp = NM_TEMP(squad);
+
+    -- Tell the squad to move to the destination
+    Command_SquadMovePos( player, sg_temp, posTarget, false, false);
+    
+    -- Clear the group (Use SGroup_Destroy instead?)
+    SGroup_Clear(sg_temp);
 
 end
 
 function NM_ReplaceAbility(squadID, abp)
     Squad_AddAbility(squadID, abp); 
+end
+
+function NM_TEMP(squad)
+    local sg_tempsquad = SGroup_CreateIfNotFound("sg_tempsquad_" ..Squad_GetGameID(squad));
+    SGroup_Add(sg_tempsquad, squad);
+    return sg_tempsquad;
+end
+
+function NM_CommandAbility(...) -- player, ability, pos
+    
+    -- Get ability from our list
+    local abp = nm_commandabilitylist[BP_GetName(arg[2])];
+    
+    -- Do we recognize the used ability?
+    if (abp ~= nil) then
+        
+        -- Try and Stop the used ability (Not always possible, might make the ability happen twice, but it shouldn't be too bad. We can always modify our abilities accordingly)
+        Player_StopAbility(arg[1], arg[2], false);
+        
+        -- Make sure the player can use the ability
+        if not Player_HasAbility( arg[1], abp ) then
+
+            -- Add the ability
+            Player_AddAbility( arg[1], abp ); 
+
+        end
+
+        -- Use our replacement ability
+        Command_PlayerPosAbility( arg[1], arg[1], arg[3], abp, true);
+
+    end
+
 end

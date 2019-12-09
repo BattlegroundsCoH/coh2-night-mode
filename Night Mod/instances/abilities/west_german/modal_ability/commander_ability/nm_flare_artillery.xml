@@ -303,6 +303,14 @@
 				<float name="min_completed" value="1" />
 				<instance_reference name="upgrade_name" value="upgrade\blizzard_active" />
 			</template_reference>
+			<template_reference name="required" value="requirements\required_player_upgrade">
+				<enum name="reason" value="usage_and_display" />
+				<locstring name="ui_name" value="0" />
+				<bool name="is_present" value="True" />
+				<float name="max_completed" value="100" />
+				<float name="min_completed" value="1" />
+				<instance_reference name="upgrade_name" value="upgrade\global\hide_ability" mod="3690fed557b44fc68b9753c2f52ed775" />
+			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_artillery" />
 		<int name="ui_position" value="40" />
