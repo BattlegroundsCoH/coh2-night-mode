@@ -9,7 +9,7 @@ import("WinConditions/nightmode_dyn.scar");
 ----------------------------------------------------
 
 -- DO NOT ENABLE DEV MODE FOR RELEASE BUILD
-Dev_Night_Mode = false;
+Dev_Night_Mode = true;
 
 daynightcycle = {};
 daynightcycle.DAY = 1; -- ENUM for day
@@ -18,7 +18,7 @@ daynightcycle.curreantatmos = nil; -- The current atmoshphere file
 daynightcycle.atmospherefolder = "data:art/scenarios/presets/atmosphere/"; -- Folder to load atmospheres from
 daynightcycle.supportedMods = {
     ["Vanilla"] = { 
-        comp = nil, -- Compatability Entity
+        comp = "3690fed557b44fc68b9753c2f52ed775:aura_night_debuff", -- Compatability Entity
         night = "3690fed557b44fc68b9753c2f52ed775:time_night", -- Night upgrade
         day = "3690fed557b44fc68b9753c2f52ed775:time_day", -- Day upgrade
     },
@@ -61,7 +61,7 @@ daynightcycle.init = function()
     
     -- Setup seasonal data
     daynightcycle.currentseason = {}; -- Seasonal data
-    daynightcycle.updateTime = 7.5 * 60; -- Update time (How often should we cycle between day and night)
+    daynightcycle.updateTime = 1 * 60; -- Update time (How often should we cycle between day and night)
     daynightcycle.transitionTime = 2 * 60; -- The time to transition from one atmosphere to another
    
     -- Are we playing on a winter map (Equal to calling World_IsWinterMap)
@@ -128,7 +128,7 @@ daynightcycle.init = function()
     end
     
     -- Create night aura buffer/debuffer
-    Util_CreateEntities( nil, nil, BP_GetEntityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_aura_night_debuff"), World_Pos(0, 0, 0), 1, nil );
+    Util_CreateEntities( nil, nil, BP_GetEntityBlueprint(daynightcycle.supportedMods[daynightcycle.activeMod].comp), World_Pos(0, 0, 0), 1, nil );
 
     -- setting the Time of day
     daynightcycle.time = daynightcycle.GetInitialTime();
@@ -230,8 +230,8 @@ daynightcycle.GetActiveMod = function()
     -- For all possible mods
     for k, v in pairs(daynightcycle.supportedMods) do
 
-        -- No reason to check if it's nil
-        if v.comp ~= nil then
+        -- No reason to check if it's nil or for vanilla, as that's the fallback
+        if v.comp ~= nil and k ~= "Vanilla" then
             
             -- Try (with a protected call) to check if we can access the entity that shows compatibility
             if pcall(BP_GetEntityBlueprint, v.comp) then
