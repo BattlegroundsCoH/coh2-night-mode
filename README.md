@@ -50,7 +50,7 @@ In this next step, we will put to use everything we created so far. Let us creat
 
 ![EBPS 1](https://i.imgur.com/tpiUvht.png)
 
-It doesn't really matter what `animator` you use in `entity_blueprint_ext` as long you set the `is_visible_in_game` to `False`. But the most important thing here is the `radius` in your `add_aura` action. Make sure that the `radius` is set to max range possible an that is `3,402823E+38`.
+It doesn't really matter what `animator` you use in `entity_blueprint_ext` as long you set the `is_visible_in_game` to `False`. But the most important thing here is the `radius` in your `add_aura` action. Make sure that the `radius` is set to max range possible and that is `3,402823E+38`.
 
 Our next EBPS file will be called `aura_flare`.
 
