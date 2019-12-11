@@ -74,8 +74,8 @@ function NM_CheckPlayers()
         local sg_temp = Player_GetSquads( v.nm_player );
         SGroup_RemoveGroup(sg_temp, v.player_group);
         if (SGroup_Count(sg_temp) > 0) then
-            SGroup_ForEach( sg_temp, NM_SquadSpawned ); 
             SGroup_AddGroup(v.player_group, sg_temp);
+            SGroup_ForEach( sg_temp, NM_SquadSpawned ); 
         end
         SGroup_Clear(sg_temp);
     end
@@ -85,7 +85,11 @@ function NM_SquadSpawned(sgroupid, itemindex, squadID)
     local sbp = nm_squadblueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
     local abp = nm_abilityblueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
     if (sbp ~= nil) then
-        NM_ReplaceSquad(squadID, sbp);
+        if (Squad_IsMoving(squadID)) then
+            NM_ReplaceSquad(squadID, sbp);
+        else
+            SGroup_Remove(nm_players[Player_GetID(Squad_GetPlayerOwner(squadID))].player_group, squadID );
+        end
     end
     if (abp ~= nil) then
         NM_ReplaceAbility(squadID, abp.new);
