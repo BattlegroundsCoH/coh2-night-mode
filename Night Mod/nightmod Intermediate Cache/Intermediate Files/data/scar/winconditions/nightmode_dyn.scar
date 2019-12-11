@@ -27,6 +27,8 @@ function NM_HookNightMode()
     -- List of command abilities to replace (All custom abilities must require the hide_ability player upgrade so they dont show in the UI)
     nm_commandabilitylist = {
         ["flare_artillery"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_artillery"),
+        ["early_warning"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_early_warning"),
+        ["mortar_artillery"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_mortar_artillery"),
     };
 
     -- Players to keep track of
@@ -72,8 +74,8 @@ function NM_CheckPlayers()
         local sg_temp = Player_GetSquads( v.nm_player );
         SGroup_RemoveGroup(sg_temp, v.player_group);
         if (SGroup_Count(sg_temp) > 0) then
-            SGroup_ForEach( sg_temp, NM_SquadSpawned ); 
             SGroup_AddGroup(v.player_group, sg_temp);
+            SGroup_ForEach( sg_temp, NM_SquadSpawned ); 
         end
         SGroup_Clear(sg_temp);
     end
@@ -83,7 +85,11 @@ function NM_SquadSpawned(sgroupid, itemindex, squadID)
     local sbp = nm_squadblueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
     local abp = nm_abilityblueprintlist[BP_GetName(Squad_GetBlueprint(squadID))];
     if (sbp ~= nil) then
-        NM_ReplaceSquad(squadID, sbp);
+        if (Squad_IsMoving(squadID)) then
+            NM_ReplaceSquad(squadID, sbp);
+        else
+            SGroup_Remove(nm_players[Player_GetID(Squad_GetPlayerOwner(squadID))].player_group, squadID );
+        end
     end
     if (abp ~= nil) then
         NM_ReplaceAbility(squadID, abp.new);
@@ -148,8 +154,18 @@ function NM_CommandAbility(...) -- player, ability, pos
 
         end
 
-        -- Use our replacement ability
-        Command_PlayerPosAbility( arg[1], arg[1], arg[3], abp, true);
+        -- Make sure arg3 is a scar position
+        if (scartype(arg[3]) == ST_SCARPOS) then
+
+            -- Use our replacement ability
+            Command_PlayerPosAbility( arg[1], arg[1], arg[3], abp, true);
+
+        else
+
+            -- Use our replacement ability (without a position)
+            Command_PlayerAbility( arg[1], arg[1], abp, true );
+
+        end
 
     end
 

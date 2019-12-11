@@ -23,18 +23,18 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'12/9/2019'</value>
+      <value>'12. 11. 2019'</value>
     </define>
     <omit-trace-statements>false</omit-trace-statements>
     <optimize>true</optimize>
     <verbose-stacktraces>false</verbose-stacktraces>
     <source-path append="true">
-      <path-element>E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache</path-element>
+      <path-element>D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache</path-element>
     </source-path>
     <include-libraries />
   </compiler>
   <file-specs>
-    <path-element>E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\ModIcons_3690fed557b44fc68b9753c2f52ed775.mxml</path-element>
+    <path-element>D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\ModIcons_3690fed557b44fc68b9753c2f52ed775.mxml</path-element>
   </file-specs>
   <default-background-color>#000000</default-background-color>
   <default-frame-rate>30</default-frame-rate>
