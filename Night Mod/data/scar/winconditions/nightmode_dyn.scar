@@ -150,8 +150,18 @@ function NM_CommandAbility(...) -- player, ability, pos
 
         end
 
-        -- Use our replacement ability
-        Command_PlayerPosAbility( arg[1], arg[1], arg[3], abp, true);
+        -- Make sure arg3 is a scar position
+        if (scartype(arg[3]) == ST_SCARPOS) then
+
+            -- Use our replacement ability
+            Command_PlayerPosAbility( arg[1], arg[1], arg[3], abp, true);
+
+        else
+
+            -- Use our replacement ability (without a position)
+            Command_PlayerAbility( arg[1], arg[1], abp, true );
+
+        end
 
     end
 
