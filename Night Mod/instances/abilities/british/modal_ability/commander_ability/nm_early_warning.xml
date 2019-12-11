@@ -68,7 +68,7 @@
 											<float name="source_offset_z" value="1" />
 											<float name="time_range_between_shells_max" value="4.5" />
 											<float name="time_range_between_shells_min" value="2" />
-											<instance_reference name="weapon_name" value="weapon\british\explosive_weapons\light_artillery\early_warning_artillery_flare_mp" />
+											<instance_reference name="weapon_name" value="weapon\british\explosive_weapons\light_artillery\nm_early_warning_artillery_flare" mod="3690fed557b44fc68b9753c2f52ed775" />
 											<uniqueid name="id" value="1073747888" />
 										</template_reference>
 										<template_reference name="action" value="action\spawn_entity">
@@ -213,6 +213,14 @@
 					<float name="soviet_progression" value="0" />
 					<float name="soviet_227" value="0" />
 				</template_reference>
+			</template_reference>
+			<template_reference name="required" value="requirements\required_player_upgrade">
+				<enum name="reason" value="usage_and_display" />
+				<locstring name="ui_name" value="0" />
+				<bool name="is_present" value="True" />
+				<float name="max_completed" value="100" />
+				<float name="min_completed" value="1" />
+				<instance_reference name="upgrade_name" value="upgrade\global\hide_ability" mod="3690fed557b44fc68b9753c2f52ed775" />
 			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_airstrike" />

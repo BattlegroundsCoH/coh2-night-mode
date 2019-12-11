@@ -27,6 +27,8 @@ function NM_HookNightMode()
     -- List of command abilities to replace (All custom abilities must require the hide_ability player upgrade so they dont show in the UI)
     nm_commandabilitylist = {
         ["flare_artillery"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_artillery"),
+        ["early_warning"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_early_warning"),
+        ["mortar_artillery"] = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_mortar_artillery"),
     };
 
     -- Players to keep track of

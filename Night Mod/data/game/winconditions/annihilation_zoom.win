@@ -31,43 +31,43 @@ entity_replacements =
 	{
 		original = "victory_point",
 		replacement = "territory_point_mp",
-	}
+	},
 	{
 		original = "lamp_01",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_lamp_01",
-	}
+	},
 	{
 		original = "lamp_02",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_lamp_02",
-	}
+	},
 	{
 		original = "lamp_simple_01",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_lamp_simple_01",
-	}
+	},
 	{
 		original = "lamp_simple_02",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_lamp_simple_02",
-	}
+	},
 	{
 		original = "lamp_simple_03",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_lamp_simple_03",
-	}
+	},
 	{
 		original = "rural_lamp_s_01",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_rural_lamp_s_01",
-	}
+	},
 	{
 		original = "rural_lamp_s_01_seton",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_rural_lamp_s_01_seton",
-	}
+	},
 	{
 		original = "rural_lamp_soviet_01",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_rural_lamp_soviet_01",
-	}
+	},
 	{
 		original = "buildable_campfire_mp",
 		replacement = "3690fed557b44fc68b9753c2f52ed775:nm_buildable_campfire"
-	}
+	},
 }
 starting_building_replacements =
 {

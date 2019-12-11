@@ -68,7 +68,7 @@
 									<float name="drop_drift" value="10" />
 									<float name="drop_height" value="18" />
 									<float name="drop_zone_centre_scatter" value="4" />
-									<instance_reference name="entity_to_spawn" value="ebps\projectile\artillery_flare_west_german" />
+									<instance_reference name="entity_to_spawn" value="ebps\projectile\nm_artillery_flare_west_german" mod="3690fed557b44fc68b9753c2f52ed775" />
 									<float name="max_squad_entity_count" value="0" />
 									<instance_reference name="squad_to_spawn" value="" />
 									<int name="number_of_entities_to_spawn" value="1" />
@@ -92,26 +92,6 @@
 										<int name="phrase_order" value="0" />
 										<locstring name="phrase" value="0" />
 									</template_reference>
-								</template_reference>
-								<template_reference name="action" value="action\spawn_entity">
-									<float name="duration" value="33" />
-									<instance_reference name="entity_blueprint" value="ebps\auras\aura_flare_riflemen" mod="3690fed557b44fc68b9753c2f52ed775" />
-									<bool name="permanent" value="False" />
-									<bool name="player_owned" value="False" />
-									<group name="target_info">
-										<template_reference name="target_info" value="type_ability_target_type\all">
-										</template_reference>
-									</group>
-									<uniqueid name="id" value="1073747902" />
-									<template_reference name="spawn_attached_option" value="options\none">
-									</template_reference>
-									<list name="spawned_entity_actions">
-									</list>
-									<group name="offset">
-										<float name="x" value="0" />
-										<float name="y" value="0" />
-										<float name="z" value="0" />
-									</group>
 								</template_reference>
 							</list>
 							<uniqueid name="id" value="1073747900" />
@@ -221,6 +201,14 @@
 					<float name="soviet_progression" value="0" />
 					<float name="soviet_227" value="0" />
 				</template_reference>
+			</template_reference>
+			<template_reference name="required" value="requirements\required_player_upgrade">
+				<enum name="reason" value="usage_and_display" />
+				<locstring name="ui_name" value="0" />
+				<bool name="is_present" value="True" />
+				<float name="max_completed" value="100" />
+				<float name="min_completed" value="1" />
+				<instance_reference name="upgrade_name" value="upgrade\global\hide_ability" mod="3690fed557b44fc68b9753c2f52ed775" />
 			</template_reference>
 		</list>
 		<enum name="ability_super" value="tp_artillery" />
