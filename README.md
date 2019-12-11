@@ -1,3 +1,5 @@
+# Night Mode
+
 ## Table of contents
 * [About](https://github.com/RagnarTheEverchosen/CoH2NightMode#about)
 * [For Modders](https://github.com/RagnarTheEverchosen/CoH2NightMode#for-modders)
