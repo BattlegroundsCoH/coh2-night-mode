@@ -15,13 +15,14 @@ function NM_HookNightMode()
 
     -- List of squad blueprints to replace abilities for
     nm_abilityblueprintlist = {
-        ["riflemen_squad_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
-        ["riflemen_squad_veteran_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") };
-        ["sniper_team_mp"] = { org = BP_GetAbilityBlueprint("sniper_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_sniper_fire_flares") };
-        ["assault_pioneer_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
-        ["jaeger_light_infantry_recon_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
-        ["obersoldaten_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
-        ["volksgrenadier_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") };
+        ["riflemen_squad_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") },
+        ["riflemen_squad_veteran_mp"] = { org = BP_GetAbilityBlueprint("riflemen_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_riflemen_fire_flares") },
+        ["sniper_team_mp"] = { org = BP_GetAbilityBlueprint("sniper_fire_flares_ability_mp"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_sniper_fire_flares") },
+        ["assault_pioneer_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") },
+        ["jaeger_light_infantry_recon_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") },
+        ["obersoldaten_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") },
+        ["volksgrenadier_squad_mp"] = { org = BP_GetAbilityBlueprint("flare_trap_capture_point"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:nm_flare_trap_capture_point") },
+        ["panzerfusilier_squad_mp"] = { org = BP_GetAbilityBlueprint("panzerfusiliers_flare"), new = BP_GetAbilityBlueprint("3690fed557b44fc68b9753c2f52ed775:panzerfusiliers_flare_nm") },
     };
     
     -- List of command abilities to replace (All custom abilities must require the hide_ability player upgrade so they dont show in the UI)
@@ -39,11 +40,6 @@ function NM_HookNightMode()
         
         -- Get player pointer
         local player = World_GetPlayerAt(i);
-
-        -- Yay O(#player * #nm_abilityblueprintlist)
-        for k,v in pairs(nm_abilityblueprintlist) do
-            Player_SetAbilityAvailability(player, v.org, ITEM_REMOVED); 
-        end
 
         -- 'hook' player
         NM_HookPlayer(player);
@@ -92,7 +88,7 @@ function NM_SquadSpawned(sgroupid, itemindex, squadID)
         end
     end
     if (abp ~= nil) then
-        NM_ReplaceAbility(squadID, abp.new);
+        NM_ReplaceAbility(squadID, abp);
     end
 end
 
@@ -126,7 +122,14 @@ function NM_ReplaceSquad(squadID, sbp)
 end
 
 function NM_ReplaceAbility(squadID, abp)
-    Squad_AddAbility(squadID, abp); 
+    if abp.org ~= nil and abp.new ~= nil then
+        Player_SetAbilityAvailability(Squad_GetPlayerOwner(squadID), abp.org, ITEM_REMOVED);
+        Squad_AddAbility(squadID, abp.new); 
+    else
+        for k,v in pairs(abp) do
+            NM_ReplaceAbility(squadID, v);
+        end
+    end
 end
 
 function NM_TEMP(squad)

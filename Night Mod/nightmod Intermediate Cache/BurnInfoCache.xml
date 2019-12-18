@@ -2,295 +2,299 @@
 <BurnInfoRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\annihilation.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\annihilation.win</FileName>
 			<FileHash>b55d3e9e0267d9086e5743119922911b</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_2x_res.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_2x_res.win</FileName>
 			<FileHash>fec3f75c98616a0d59bf692195c41a9c</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_zoom.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_zoom.win</FileName>
 			<FileHash>b7f81000aeb93e82afd04fa7fcb796d3</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_zoom_2x_res.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\annihilation_zoom_2x_res.win</FileName>
 			<FileHash>0e5623c6f9a1d64cbd4626820a11db57</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints.win</FileName>
 			<FileHash>5bea1fa979b45c56a51b0c25628c26be</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_2x_res.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_2x_res.win</FileName>
 			<FileHash>953b43be354cbef6449aae26cf8d5e20</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_zoom.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_zoom.win</FileName>
 			<FileHash>c415fc527b885a416d94273f70a5c9b6</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_zoom_2x_res.win</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\game\winconditions\victorypoints_zoom_2x_res.win</FileName>
 			<FileHash>24551e5d07d9467f4eaaa7d1083d9fce</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation.scar</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation.scar</FileName>
 			<FileHash>ebbccbd1a068d856533c2a6d5a665053</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_2x_res.scar</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_2x_res.scar</FileName>
 			<FileHash>c672cf54e83a6e65a4000aced5858702</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_zoom.scar</FileName>
-			<FileHash>9a9a5ff00a4a8959d09cafba8f9a06d0</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_zoom.scar</FileName>
+			<FileHash>64896d5937ef092b157b5f60b3b9f987</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_zoom_2x_res.scar</FileName>
-			<FileHash>8536b7bba51e35aafdb7b191b51280c7</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\annihilation_zoom_2x_res.scar</FileName>
+			<FileHash>7355b46189072ea9f9c17609e551291f</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\commandertables.scar</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\commandertables.scar</FileName>
 			<FileHash>6c97f7dabd3975bea672bda8df96afdb</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\daynightcycle.scar</FileName>
-			<FileHash>5797ede302ec96388259f1cff894a748</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\daynightcycle.scar</FileName>
+			<FileHash>09a09c8cc49846b6e651a07e6f7b3959</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\nightmode_dyn.scar</FileName>
-			<FileHash>ad19a689b9a57d90d51dc8299928fbd1</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\nightmode_dyn.scar</FileName>
+			<FileHash>d6f2eda589ddc58a96b43f75781e35f0</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints.scar</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints.scar</FileName>
 			<FileHash>a5c0d423c716772a2aef3a01c1439be6</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_2x_res.scar</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_2x_res.scar</FileName>
 			<FileHash>9e753a2f8ca2231181cacb67126367f5</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_zoom.scar</FileName>
-			<FileHash>dbf7f851d2fe36571f3f95460543886d</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_zoom.scar</FileName>
+			<FileHash>05f9603bd165c40cb0bf0e8235d13057</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_zoom_2x_res.scar</FileName>
-			<FileHash>cc2c0713a740e6fbaa395e5b08c95af2</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\victorypoints_zoom_2x_res.scar</FileName>
+			<FileHash>e51c2c6380efa1217b87a17ec820a0fb</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\ui\glo_developer.png</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\scar\winconditions\zoomfix.scar</FileName>
+			<FileHash>5416d9e627d93057cb41fabf712e6488</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\data\ui\glo_developer.png</FileName>
 			<FileHash>68e7f2b99e04b2ed7e1df32057b28e1c</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\data\ui\time_night.png</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\data\ui\time_night.png</FileName>
 			<FileHash>b781bfb310a5c0d6eab41818d337d63b</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\nightmod Intermediate Cache\Intermediate Files\info\3690fed557b44fc68b9753c2f52ed775.info</FileName>
 			<FileHash>2f7f40640131deafee7bf6f76a3fed2a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\icon.tga</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\icon.tga</FileName>
 			<FileHash>f6944a12e5c5c36b97eb4e1289fbf24f</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\locale\english\english.ucs</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\locale\english\english.ucs</FileName>
 			<FileHash>00951ac02975403e2e450c606f858507</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\nightmodattrib.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\nightmodattrib.xml</FileName>
 			<FileHash>cbc9622662c247e8fc4f3d9925288c8a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\nm_dev.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\nm_dev.xml</FileName>
 			<FileHash>1cc6aef8eb15ee311d9c46b708dd6646</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\aef\modal_ability\nm_aef_mortar_fire_flares.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\aef\modal_ability\nm_aef_mortar_fire_flares.xml</FileName>
 			<FileHash>d30bc616ae1e9418deaf1f33fc55d360</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\aef\modal_ability\nm_riflemen_fire_flares.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\aef\modal_ability\nm_riflemen_fire_flares.xml</FileName>
 			<FileHash>c2654df23cb3e688f937d7b1296fb5c7</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\british\modal_ability\commander_ability\nm_early_warning.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\british\modal_ability\commander_ability\nm_early_warning.xml</FileName>
 			<FileHash>04dfcdf2f203d40853666397efd50949</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\british\modal_ability\commander_ability\nm_mortar_artillery.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\british\modal_ability\commander_ability\nm_mortar_artillery.xml</FileName>
 			<FileHash>1357730e719cb7455808cedcfdeb3940</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\german\modal_ability\nm_ger_mortar_fire_flares.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\german\modal_ability\nm_ger_mortar_fire_flares.xml</FileName>
 			<FileHash>88706639db15567ca68b6c2c0882f7ce</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\german\modal_ability\nm_ger_mortar_fire_flares_ht.xml</FileName>
-			<FileHash>622899a56f353cfaed6640e43b8ed219</FileHash>
-		</BurnInfo>
-		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sniper_fire_flares.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sniper_fire_flares.xml</FileName>
 			<FileHash>4ba454b98cc38f32636c5454c7b23753</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_01.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_01.xml</FileName>
 			<FileHash>f0a2219f2a1670879cbdf82c3bb12025</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_02.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\soviet\modal_ability\nm_sov_mortar_fire_flares_02.xml</FileName>
 			<FileHash>6baa6dbad9cd3cfefb75728d5d33e8f1</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\west_german\modal_ability\nm_flare_trap_capture_point.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\west_german\modal_ability\nm_flare_trap_capture_point.xml</FileName>
 			<FileHash>5692393ce5d1fd777c70eec659d80b8f</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\abilities\west_german\modal_ability\commander_ability\nm_flare_artillery.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\west_german\modal_ability\panzerfusiliers_flare_nm.xml</FileName>
+			<FileHash>02af1ad62b8f2f4d809a54fd3fbc3654</FileHash>
+		</BurnInfo>
+		<BurnInfo>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\abilities\west_german\modal_ability\commander_ability\nm_flare_artillery.xml</FileName>
 			<FileHash>49e6b3a25e43cf61c0ed21c478a2c676</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\aura\global\night_debuff.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\night_debuff.xml</FileName>
 			<FileHash>f2b56f31326aeaed8797c96daecd1147</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\aura\global\night_debuff_remove.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\aura\global\night_debuff_remove.xml</FileName>
 			<FileHash>a6bae0f917751eff5b6144bf951b25ab</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\auras\aura_flare_mortar.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\auras\aura_flare_mortar.xml</FileName>
 			<FileHash>6962b1264ba365ed00d9a87989ed597e</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\auras\aura_flare_riflemen.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\auras\aura_flare_riflemen.xml</FileName>
 			<FileHash>5f3125cd4ebab2d9b2a816cd3daa4404</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\auras\aura_night_debuff.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\auras\aura_night_debuff.xml</FileName>
 			<FileHash>cb367f27456d0ca7faf1c96ea77c33a4</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_01.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_01.xml</FileName>
 			<FileHash>e8a157054855c8e30082d12ce5a023e6</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_02.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_02.xml</FileName>
 			<FileHash>2d1099b9dd618935ffdb7860af9b126c</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_01.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_01.xml</FileName>
 			<FileHash>f4b5fe66adcbe4d0225db15db6a70b46</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_02.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_02.xml</FileName>
 			<FileHash>f20ec9521ccf6f04336dcba88ce4abc1</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_03.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_lamp_simple_03.xml</FileName>
 			<FileHash>52dfc6214e8e9ef3dae3560fea9aba60</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_soviet_01.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_soviet_01.xml</FileName>
 			<FileHash>861bb1d4b87944eea1465ba45f045e7d</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_s_01.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_s_01.xml</FileName>
 			<FileHash>d1ca11d237881b791db9eda8dfecd281</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_s_01_seton.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\environment\art_ambient\objects\posts\lamp\nm_rural_lamp_s_01_seton.xml</FileName>
 			<FileHash>04f158a8927e38ae85c4a36c2ceb60b1</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\gameplay\nm_buildable_campfire.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\gameplay\nm_buildable_campfire.xml</FileName>
 			<FileHash>f0ad61b8ae369671d925ca7518b07a66</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\projectile\nm_artillery_flare_west_german.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\projectile\nm_artillery_flare_west_german.xml</FileName>
 			<FileHash>4bcb94849a332c63675acdea294b72cb</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\projectile\nm_british_artillery_flare_early_warning_paradrop.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\projectile\nm_british_artillery_flare_early_warning_paradrop.xml</FileName>
 			<FileHash>0491e25c56038264894a9736eaecb973</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\props\nm_flare_booby_trap.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\props\nm_flare_booby_trap.xml</FileName>
 			<FileHash>caea2cecea8fd836a2b8e188d8e297ec</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\props\nm_mortar_flare.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\props\nm_mortar_flare.xml</FileName>
 			<FileHash>0f5667be1a7bb691057194d1ca0d0196</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\aef\team_weapons\nm_m1_81mm_mortar.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\aef\team_weapons\nm_m1_81mm_mortar.xml</FileName>
 			<FileHash>2681a0b6b6959b10a05ac543aa86051a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\aef\vehicles\m3_halftrack\m21_mortar_halftrack_nm.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\aef\vehicles\m3_halftrack\m21_mortar_halftrack_nm.xml</FileName>
 			<FileHash>f12f76bc413ea04f853d5be3a0c1e77a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\german\team_weapons\nm_granatewerfer_34_81mm_mortar.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\german\team_weapons\nm_granatewerfer_34_81mm_mortar.xml</FileName>
 			<FileHash>245cbc830a13339fa283d0e86099b66b</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\german\vehicles\light_halftrack_250\mortar_light_halftrack_250_7_nm.xml</FileName>
-			<FileHash>fd4ad87230762a7e521d7988890cc283</FileHash>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\german\vehicles\light_halftrack_250\mortar_light_halftrack_250_7_nm.xml</FileName>
+			<FileHash>832088972f04b27cb2bbb97148d0737b</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\nm_hm-120_38_mortar.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\nm_hm-120_38_mortar.xml</FileName>
 			<FileHash>51f5a51a5fb969196c4455b18ff49b15</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\nm_pm41_82mm_mortar.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\ebps\races\soviet\team_weapons\nm_pm41_82mm_mortar.xml</FileName>
 			<FileHash>5a00bb45d7727e250bfe187acb347e91</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\aef\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_squad.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\aef\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_squad.xml</FileName>
 			<FileHash>848034636bce53b57186f62ef3f5e646</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\aef\vehicles\m3_halftrack_squad\m21_mortar_halftrack_squad_nm.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\aef\vehicles\m3_halftrack_squad\m21_mortar_halftrack_squad_nm.xml</FileName>
 			<FileHash>d2ffdc615b3441ea899297c7a2dc6cbc</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\british\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_british_squad.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\british\team_weapons\m1_81mm_mortar_squad\nm_m1_81mm_mortar_british_squad.xml</FileName>
 			<FileHash>bb57a417a608ea3b58d25b0aa16febe7</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\german\soldiers\mortar_team\nm_mortar_team_81mm.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\german\soldiers\mortar_team\nm_mortar_team_81mm.xml</FileName>
 			<FileHash>14838ec096499931cd042c6dced248bb</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\german\vehicles\halftrack_squad\mortar_250_halftrack_squad_nm.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\german\vehicles\halftrack_squad\mortar_250_halftrack_squad_nm.xml</FileName>
 			<FileHash>cf95839044466bb5439fe3e7068d4675</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\nm_hm-120_38_mortar_squad.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\nm_hm-120_38_mortar_squad.xml</FileName>
 			<FileHash>b45ff8d2748bbd3ddb37df806128c939</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\nm_pm-82_41_mortar_squad.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\sbps\races\soviet\soldiers\mortar_squad\nm_pm-82_41_mortar_squad.xml</FileName>
 			<FileHash>c3bf9e8fe43f3c3d96504a8e567a90c3</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\slot_item\global\time_night_slotitem.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\slot_item\global\time_night_slotitem.xml</FileName>
 			<FileHash>04867d8a4c9169b1487cbcb32b2ffa61</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\upgrade\global\hide_ability.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\hide_ability.xml</FileName>
 			<FileHash>099dd13c25547e2e404ba8b9ff2cce4a</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\upgrade\global\time_day.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_day.xml</FileName>
 			<FileHash>2d2bf8ef3a6970d844c0ac45e48e6ac5</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\upgrade\global\time_night.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\upgrade\global\time_night.xml</FileName>
 			<FileHash>1eca561d7a210ca4f300bb73cb190196</FileHash>
 		</BurnInfo>
 		<BurnInfo>
-			<FileName>D:\coh2_projects\CoH2NightMode\Night Mod\instances\weapon\british\explosive_weapons\light_artillery\nm_early_warning_artillery_flare.xml</FileName>
+			<FileName>E:\CoH2NightMode\Night Mod\instances\weapon\british\explosive_weapons\light_artillery\nm_early_warning_artillery_flare.xml</FileName>
 			<FileHash>6d73f8b5a9968e256fd67fa0deb04230</FileHash>
 		</BurnInfo>
 	</BurnInfo>

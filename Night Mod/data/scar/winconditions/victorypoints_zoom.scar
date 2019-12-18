@@ -7,15 +7,7 @@ import("Prototype/SpecialAEFunctions.scar")
 import("PrintOnScreen.scar")
 --import("winconditions/commandertables.scar")
 import("WinConditions/daynightcycle.scar");
-
-local function Night_Mode_Camera_Init()
-	Camera_SetTuningValue(TV_DistMax, 70)
-	Camera_SetTuningValue(TV_DefaultHeight, 65)
-	Camera_SetTuningValue(TV_DefaultDeclination, 48)
-	Camera_ResetToDefault()
-end
-
-Scar_AddInit(Night_Mode_Camera_Init)
+import("WinConditions/zoomfix.scar");
 
 -- Pre-generated --
 function WinCondition_GameOver(winningTeam, losingTeam)

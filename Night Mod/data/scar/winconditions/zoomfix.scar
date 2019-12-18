@@ -1,0 +1,30 @@
+----------------------------------------------------
+----------- Camera Zoom Reload Fix -----------------
+-------------- Fixed by CoDiEx ---------------------
+----------------------------------------------------
+
+function NM_FixZoom()
+    
+    -- Set camera values
+    Camera_SetTuningValue(TV_DistMax, 70)
+	Camera_SetTuningValue(TV_DefaultHeight, 65)
+	Camera_SetTuningValue(TV_DefaultDeclination, 48)
+    Camera_ResetToDefault()
+    
+    -- Remove self
+    Rule_RemoveMe();
+
+end
+
+function NM_GameLoaded()
+
+    -- Call ASAP
+    Rule_Add(NM_FixZoom);
+
+    -- Invalidate ourselves
+    NM_GameLoaded = nil;
+
+end
+
+-- Call this each time the script is loaded
+NM_GameLoaded();
